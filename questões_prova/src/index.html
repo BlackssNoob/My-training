@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Provas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Sistema de Provas</h1>
+            <p>Selecione uma opção para começar</p>
+        </header>
+        
+        <main class="main-menu">
+            <div class="menu-card" onclick="window.location.href='hub.html'">
+                <div class="menu-icon">📋</div>
+                <h2>Ver Todas as Provas</h2>
+                <p>Navegue por todas as provas disponíveis</p>
+            </div>
+            
+            <div class="menu-card" onclick="carregarProvaAleatoria()">
+                <div class="menu-icon">🎲</div>
+                <h2>Prova Aleatória</h2>
+                <p>Responda uma prova selecionada aleatoriamente</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/hub.js"></script>
+    <script>
+        function carregarProvaAleatoria() {
+            fetch('../data/provas/')
+                .then(response => response.text())
+                .then(data => {
+                    const files = data.match(/prova_[a-f0-9]+\.json/g) || [];
+                    if (files.length > 0) {
+                        const randomFile = files[Math.floor(Math.random() * files.length)];
+                        const provaId = randomFile.replace('prova_', '').replace('.json', '');
+                        window.location.href = `prova.html?id=${provaId}`;
+                    } else {
+                        alert('Nenhuma prova encontrada!');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    alert('Erro ao carregar provas');
+                });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responder Prova</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="prova-header">
+            <a href="hub.html" class="back-btn">← Voltar ao Hub</a>
+            <h1 id="provaTitle">Carregando prova...</h1>
+            <div class="prova-info">
+                <span id="provaCargo"></span>
+                <span id="provaOrganizadora"></span>
+                <span id="provaAno"></span>
+            </div>
+        </header>
+
+        <div class="prova-stats">
+            <div class="stat">
+                <span class="stat-number" id="totalQuestoes">0</span>
+                <span class="stat-label">Total</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="respondidas">0</span>
+                <span class="stat-label">Respondidas</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="corretas">0</span>
+                <span class="stat-label">Corretas</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="pontuacao">0%</span>
+                <span class="stat-label">Pontuação</span>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <div id="loading" class="loading">Carregando prova...</div>
+
+        <div id="provaContent" style="display: none;">
+            <!-- Textos base serão inseridos aqui -->
+            <div id="textosBaseContainer"></div>
+            
+            <!-- Questões serão inseridas aqui -->
+            <div id="questoesContainer"></div>
+
+            <div class="prova-actions">
+                <button id="finalizarBtn" class="btn-primary">Finalizar Prova</button>
+                <button id="reiniciarBtn" class="btn-secondary">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/prova.js"></script>
+</body>
+</html>

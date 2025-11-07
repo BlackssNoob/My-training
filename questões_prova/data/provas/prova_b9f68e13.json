@@ -1,0 +1,1209 @@
+{
+  "prova": {
+    "id": "b9f68e13-5c50-4ead-bb03-b37c7fa702bc",
+    "nome_prova": "agente administrativo5",
+    "cargo": "agente administrativo",
+    "organizadora": "igeduc",
+    "ano": "2018",
+    "data_processamento": "2025-11-06T21:07:02.679344",
+    "total_questoes": 40,
+    "textos_base": [
+      {
+        "id": "texto_base_1",
+        "titulo": "O texto seguinte servirá de base para responder às questões de 1 a 4.",
+        "conteudo": "SATÉLITE O Brasil e a China estão avançando em sua cooperação espacial, com foco no desenvolvimento do satélite CBERS-5, projetado para melhorar o monitoramento terrestre no Brasil. Em 29 de abril de 2025, representantes dos dois países se reuniram no Ministério da Ciência, Tecnologia e Inovação (MCTI) para discutir o andamento e as próximas etapas do projeto. O CBERS-5 será a evolução da série de satélites CBERS, operando em órbita geoestacionária para monitoramento contínuo do território brasileiro. Sua missão será o acompanhamento de fenômenos climáticos extremos e a coleta de dados sobre desmatamento e preservação ambiental. O lançamento do satélite está previsto para 2030 e contará com tecnologias avançadas, ampliando a capacidade de observação e auxiliando na previsão de desastres naturais e gestão de recursos hídricos. A ministra Luciana Santos destacou o projeto como um marco na cooperação entre os dois países, com foco em inovações sustentáveis que beneficiem o meio ambiente e a sociedade. A cooperação é parte de um esforço maior para estreitar os laços entre o Brasil e a China em alta tecnologia e inovação, alinhando-se aos princípios de desenvolvimento sustentável. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado)",
+        "questoes_relacionadas": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "questao_inicio": 1,
+        "questao_fim": 4
+      },
+      {
+        "id": "texto_base_2",
+        "titulo": "O texto seguinte servirá de base para responder às questões de 5 a 9.",
+        "conteudo": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "questoes_relacionadas": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "questao_inicio": 5,
+        "questao_fim": 9
+      }
+    ],
+    "questoes": [
+      {
+        "id": "Q001",
+        "id_questao": "Q001",
+        "numero_sequencial": 1,
+        "numero_prova": 1,
+        "texto_contexto": "SATÉLITE O Brasil e a China estão avançando em sua cooperação espacial, com foco no desenvolvimento do satélite CBERS-5, projetado para melhorar o monitoramento terrestre no Brasil. Em 29 de abril de 2025, representantes dos dois países se reuniram no Ministério da Ciência, Tecnologia e Inovação (MCTI) para discutir o andamento e as próximas etapas do projeto. O CBERS-5 será a evolução da série de satélites CBERS, operando em órbita geoestacionária para monitoramento contínuo do território brasileiro. Sua missão será o acompanhamento de fenômenos climáticos extremos e a coleta de dados sobre desmatamento e preservação ambiental. O lançamento do satélite está previsto para 2030 e contará com tecnologias avançadas, ampliando a capacidade de observação e auxiliando na previsão de desastres naturais e gestão de recursos hídricos. A ministra Luciana Santos destacou o projeto como um marco na cooperação entre os dois países, com foco em inovações sustentáveis que beneficiem o meio ambiente e a sociedade. A cooperação é parte de um esforço maior para estreitar os laços entre o Brasil e a China em alta tecnologia e inovação, alinhando-se aos princípios de desenvolvimento sustentável. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado)",
+        "enunciado": "Após a leitura do texto \"SATÉLITE\", assinale a alternativa em que a concordância verbal ou nominal está INCORRETA, considerando as regras da norma padrão da Língua Portuguesa:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Em entrevista, a ministra destacou o projeto como um marco na cooperação internacional."
+          },
+          {
+            "letra": "B",
+            "texto": "Representantes dos dois países se reuniram no MCTI nesta tarde."
+          },
+          {
+            "letra": "C",
+            "texto": "O Brasil e a China estão avançando em sua cooperação espacial."
+          },
+          {
+            "letra": "D",
+            "texto": "O lançamento do satélite e suas tecnologias avançadas está previstos para 2030."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q002",
+        "id_questao": "Q002",
+        "numero_sequencial": 2,
+        "numero_prova": 2,
+        "texto_contexto": "SATÉLITE O Brasil e a China estão avançando em sua cooperação espacial, com foco no desenvolvimento do satélite CBERS-5, projetado para melhorar o monitoramento terrestre no Brasil. Em 29 de abril de 2025, representantes dos dois países se reuniram no Ministério da Ciência, Tecnologia e Inovação (MCTI) para discutir o andamento e as próximas etapas do projeto. O CBERS-5 será a evolução da série de satélites CBERS, operando em órbita geoestacionária para monitoramento contínuo do território brasileiro. Sua missão será o acompanhamento de fenômenos climáticos extremos e a coleta de dados sobre desmatamento e preservação ambiental. O lançamento do satélite está previsto para 2030 e contará com tecnologias avançadas, ampliando a capacidade de observação e auxiliando na previsão de desastres naturais e gestão de recursos hídricos. A ministra Luciana Santos destacou o projeto como um marco na cooperação entre os dois países, com foco em inovações sustentáveis que beneficiem o meio ambiente e a sociedade. A cooperação é parte de um esforço maior para estreitar os laços entre o Brasil e a China em alta tecnologia e inovação, alinhando-se aos princípios de desenvolvimento sustentável. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado)",
+        "enunciado": "O texto \"SATÉLITE\" apresenta a cooperação entre Brasil e China como:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Um esforço exclusivamente militar."
+          },
+          {
+            "letra": "B",
+            "texto": "Uma medida emergencial devido a desastres recentes."
+          },
+          {
+            "letra": "C",
+            "texto": "Uma tentativa de dominação tecnológica por parte da China."
+          },
+          {
+            "letra": "D",
+            "texto": "Um marco na cooperação internacional voltado à sustentabilidade."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q003",
+        "id_questao": "Q003",
+        "numero_sequencial": 3,
+        "numero_prova": 3,
+        "texto_contexto": "SATÉLITE O Brasil e a China estão avançando em sua cooperação espacial, com foco no desenvolvimento do satélite CBERS-5, projetado para melhorar o monitoramento terrestre no Brasil. Em 29 de abril de 2025, representantes dos dois países se reuniram no Ministério da Ciência, Tecnologia e Inovação (MCTI) para discutir o andamento e as próximas etapas do projeto. O CBERS-5 será a evolução da série de satélites CBERS, operando em órbita geoestacionária para monitoramento contínuo do território brasileiro. Sua missão será o acompanhamento de fenômenos climáticos extremos e a coleta de dados sobre desmatamento e preservação ambiental. O lançamento do satélite está previsto para 2030 e contará com tecnologias avançadas, ampliando a capacidade de observação e auxiliando na previsão de desastres naturais e gestão de recursos hídricos. A ministra Luciana Santos destacou o projeto como um marco na cooperação entre os dois países, com foco em inovações sustentáveis que beneficiem o meio ambiente e a sociedade. A cooperação é parte de um esforço maior para estreitar os laços entre o Brasil e a China em alta tecnologia e inovação, alinhando-se aos princípios de desenvolvimento sustentável. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado)",
+        "enunciado": "Segundo o texto \"SATÉLITE\", o CBERS-5 contribuirá principalmente para:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Prever desastres naturais e auxiliar na gestão de recursos hídricos."
+          },
+          {
+            "letra": "B",
+            "texto": "Facilitar o comércio internacional e acordos comerciais."
+          },
+          {
+            "letra": "C",
+            "texto": "Reforçar a defesa aérea do território brasileiro."
+          },
+          {
+            "letra": "D",
+            "texto": "Estudar a possibilidade de vida em outros planetas."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q004",
+        "id_questao": "Q004",
+        "numero_sequencial": 4,
+        "numero_prova": 4,
+        "texto_contexto": "SATÉLITE O Brasil e a China estão avançando em sua cooperação espacial, com foco no desenvolvimento do satélite CBERS-5, projetado para melhorar o monitoramento terrestre no Brasil. Em 29 de abril de 2025, representantes dos dois países se reuniram no Ministério da Ciência, Tecnologia e Inovação (MCTI) para discutir o andamento e as próximas etapas do projeto. O CBERS-5 será a evolução da série de satélites CBERS, operando em órbita geoestacionária para monitoramento contínuo do território brasileiro. Sua missão será o acompanhamento de fenômenos climáticos extremos e a coleta de dados sobre desmatamento e preservação ambiental. O lançamento do satélite está previsto para 2030 e contará com tecnologias avançadas, ampliando a capacidade de observação e auxiliando na previsão de desastres naturais e gestão de recursos hídricos. A ministra Luciana Santos destacou o projeto como um marco na cooperação entre os dois países, com foco em inovações sustentáveis que beneficiem o meio ambiente e a sociedade. A cooperação é parte de um esforço maior para estreitar os laços entre o Brasil e a China em alta tecnologia e inovação, alinhando-se aos princípios de desenvolvimento sustentável. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado)",
+        "enunciado": "Qual é o principal objetivo do satélite CBERS-5, de acordo com o texto \"SATÉLITE\"?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Explorar recursos minerais na Lua."
+          },
+          {
+            "letra": "B",
+            "texto": "Monitorar atividades comerciais entre os dois países."
+          },
+          {
+            "letra": "C",
+            "texto": "Ampliar o monitoramento terrestre e ambiental no Brasil."
+          },
+          {
+            "letra": "D",
+            "texto": "Melhorar as comunicações entre o Brasil e a China."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q005",
+        "id_questao": "Q005",
+        "numero_sequencial": 5,
+        "numero_prova": 5,
+        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "enunciado": "De acordo com o texto \"GRIPE AVIÁRIA\", qual das opções descreve corretamente como será conduzida a aplicação da vacina nos voluntários?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Todos os voluntários receberão apenas uma dose da vacina."
+          },
+          {
+            "letra": "B",
+            "texto": "Serão aplicadas duas doses da vacina ou do placebo, com 21 dias de intervalo."
+          },
+          {
+            "letra": "C",
+            "texto": "Os voluntários receberão uma única dose, seguida de exames após 30 dias."
+          },
+          {
+            "letra": "D",
+            "texto": "Todos receberão placebo para comparar os efeitos, com 7 meses de intervalo."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q006",
+        "id_questao": "Q006",
+        "numero_sequencial": 6,
+        "numero_prova": 6,
+        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "enunciado": "Observe as palavras acentuadas no trecho abaixo, extraído do texto \"GRIPE AVIÁRIA\": \"O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos [...] Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas [...]\" Com base nas regras de acentuação gráfica da Língua Portuguesa, assinale a alternativa CORRETA:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "A palavra \"Plátano\" é acentuada por ser proparoxítona, mas as proparoxítonas só recebem acento quando são nomes próprios."
+          },
+          {
+            "letra": "B",
+            "texto": "A palavra \"clínicos\" é acentuada por ser uma proparoxítona, e todas as proparoxítonas são acentuadas na Língua Portuguesa."
+          },
+          {
+            "letra": "C",
+            "texto": "A palavra \"clínicos\" é acentuada por ser uma paroxítona terminada em -os, o que exige acento gráfico."
+          },
+          {
+            "letra": "D",
+            "texto": "A palavra \"aviária\" é acentuada por ser uma paroxítona terminada em a, e todas as paroxítonas com essa terminação devem receber acento."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q007",
+        "id_questao": "Q007",
+        "numero_sequencial": 7,
+        "numero_prova": 7,
+        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "enunciado": "Qual é o principal objetivo dos testes clínicos mencionados no texto \"GRIPE AVIÁRIA\"?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Descobrir se a cepa H5N8 é a mais perigosa do vírus."
+          },
+          {
+            "letra": "B",
+            "texto": "Verificar a eficácia e segurança da vacina em seres humanos."
+          },
+          {
+            "letra": "C",
+            "texto": "Confirmar se os voluntários possuem gripe aviária."
+          },
+          {
+            "letra": "D",
+            "texto": "Avaliar se a vacina poderá ser exportada para outros países."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q008",
+        "id_questao": "Q008",
+        "numero_sequencial": 8,
+        "numero_prova": 8,
+        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "enunciado": "Por que a vacina é chamada de \"monovalente\", segundo o texto \"GRIPE AVIÁRIA\"?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Porque é específica para a cepa H5N8 do vírus da gripe aviária."
+          },
+          {
+            "letra": "B",
+            "texto": "Porque será usada exclusivamente em aves contaminadas."
+          },
+          {
+            "letra": "C",
+            "texto": "Porque é uma vacina incompleta, ainda em fase inicial de testes."
+          },
+          {
+            "letra": "D",
+            "texto": "Porque pode proteger contra várias cepas do vírus da gripe."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q009",
+        "id_questao": "Q009",
+        "numero_sequencial": 9,
+        "numero_prova": 9,
+        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "enunciado": "Após a leitura do texto \"GRIPE AVIÁRIA\", assinale a alternativa em que a concordância verbal ou nominal está de acordo com a norma-padrão da língua portuguesa:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O Instituto Butantan desenvolveu a primeira vacina brasileiro contra a gripe aviária."
+          },
+          {
+            "letra": "B",
+            "texto": "Todos os exames foi realizados no Real Hospital Português."
+          },
+          {
+            "letra": "C",
+            "texto": "Os voluntários receberá duas doses — da vacina ou de um placebo."
+          },
+          {
+            "letra": "D",
+            "texto": "A análise da resposta do sistema imunológico será feita na Fiocruz."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q010",
+        "id_questao": "Q010",
+        "numero_sequencial": 10,
+        "numero_prova": 10,
+        "texto_contexto": null,
+        "enunciado": "Assinale a alternativa em que há ERRO de acentuação em ao menos uma das palavras em destaque:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O meio ambiente inclui unidades ecológicas que funcionam como sistemas naturais."
+          },
+          {
+            "letra": "B",
+            "texto": "O meio ambiente abrange recursos naturais e fenômenos físicos não criados pelo ser humano, como ar, água e clima."
+          },
+          {
+            "letra": "C",
+            "texto": "O meio ambiente represênta as condições que sustentam a vida nos ecossistemas."
+          },
+          {
+            "letra": "D",
+            "texto": "O meio ambiente é o conjunto de fatores físicos, biológicos e químicos que cercam os seres vivos."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q011",
+        "id_questao": "Q011",
+        "numero_sequencial": 11,
+        "numero_prova": 11,
+        "texto_contexto": null,
+        "enunciado": "Assinale a alternativa que NÃO contribui para aumentar a segurança do usuário na Internet:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Fazer backups regulares de dados e documentos online."
+          },
+          {
+            "letra": "B",
+            "texto": "Realizar compras apenas em lojas virtuais conhecidas e que adotem protocolos de segurança, como HTTPS."
+          },
+          {
+            "letra": "C",
+            "texto": "Clicar em links desconhecidos recebidos por e-mail."
+          },
+          {
+            "letra": "D",
+            "texto": "Utilizar software antivírus atualizado."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q012",
+        "id_questao": "Q012",
+        "numero_sequencial": 12,
+        "numero_prova": 12,
+        "texto_contexto": null,
+        "enunciado": "AGENTE ADMINISTRATIVO - 1 2 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA== Examine a planilha apresentada acima. Qual das alternativas abaixo apresenta uma fórmula que, ao ser inserida na célula B1, retorna o valor \"FALSO\", conforme exibido na planilha acima?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "=CONCATENAR(A!)"
+          },
+          {
+            "letra": "B",
+            "texto": "=MAIOR(A1:A3)"
+          },
+          {
+            "letra": "C",
+            "texto": "=MÉDIA(A!;3)"
+          },
+          {
+            "letra": "D",
+            "texto": "=EXATO(A1;A2)"
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q013",
+        "id_questao": "Q013",
+        "numero_sequencial": 13,
+        "numero_prova": 13,
+        "texto_contexto": null,
+        "enunciado": "Em uma planilha do Excel, a célula A1 contém o valor \"1\" e a célula A2 contém o valor \"9\". Na célula A3 foi inserida a fórmula =SOMA(A1:A2)/0. Considerando essas informações, qual foi o resultado exibido na célula A3?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "#DIV/0!"
+          },
+          {
+            "letra": "B",
+            "texto": "10"
+          },
+          {
+            "letra": "C",
+            "texto": "#NOME?"
+          },
+          {
+            "letra": "D",
+            "texto": "#NÚM!"
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q014",
+        "id_questao": "Q014",
+        "numero_sequencial": 14,
+        "numero_prova": 14,
+        "texto_contexto": null,
+        "enunciado": "Todas as opções a seguir são recursos da guia \"Revisão\", do Microsoft Word, EXCETO:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Comparar."
+          },
+          {
+            "letra": "B",
+            "texto": "Cabeçalho."
+          },
+          {
+            "letra": "C",
+            "texto": "Idioma."
+          },
+          {
+            "letra": "D",
+            "texto": "Controle."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q015",
+        "id_questao": "Q015",
+        "numero_sequencial": 15,
+        "numero_prova": 15,
+        "texto_contexto": null,
+        "enunciado": "A imagem acima mostra uma planilha criada no Microsoft Excel. Na célula A6, foi inserida a fórmula =CONT.NÚM(A1:B4). Considerando os dados exibidos nesse intervalo, assinale a alternativa que apresenta corretamente o valor retornado por essa fórmula:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "12."
+          },
+          {
+            "letra": "B",
+            "texto": "0."
+          },
+          {
+            "letra": "C",
+            "texto": "4."
+          },
+          {
+            "letra": "D",
+            "texto": "30."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q016",
+        "id_questao": "Q016",
+        "numero_sequencial": 16,
+        "numero_prova": 16,
+        "texto_contexto": null,
+        "enunciado": "Leia as afirmações a seguir sobre segurança na Internet: I. Verificar se você está usando uma conexão segura e adotar senhas longas e complexas são medidas que aumentam a segurança durante a navegação. II. Ativar a autenticação multifator sempre que possível e utilizar softwares e aplicativos desatualizados tornam a navegação na Internet mais segura. Com base nas informações acima, assinale a alternativa correta:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "I e II estão corretas."
+          },
+          {
+            "letra": "B",
+            "texto": "Apenas a afirmação I está correta."
+          },
+          {
+            "letra": "C",
+            "texto": "Apenas a afirmação II está correta."
+          },
+          {
+            "letra": "D",
+            "texto": "Nenhuma proposição está correta."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q017",
+        "id_questao": "Q017",
+        "numero_sequencial": 17,
+        "numero_prova": 17,
+        "texto_contexto": null,
+        "enunciado": "No Microsoft Word, o recurso \"Editor\", localizado na guia \"Página Inicial\", tem como principal função:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Criar um sumário clicável, com a numeração de páginas dos capítulos do documento."
+          },
+          {
+            "letra": "B",
+            "texto": "Identificar a necessidade de correções linguísticas no texto, incluindo erros de ortografia."
+          },
+          {
+            "letra": "C",
+            "texto": "Alterar cores e tipos de fonte no documento."
+          },
+          {
+            "letra": "D",
+            "texto": "Inserir planilhas, imagens e tabelas no documento. AGENTE ADMINISTRATIVO - 1 3 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA=="
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q018",
+        "id_questao": "Q018",
+        "numero_sequencial": 18,
+        "numero_prova": 18,
+        "texto_contexto": null,
+        "enunciado": "Observe a planilha acima. Considere que a célula A5, na planilha de Excel exibida acima, contém a fórmula =SE(A4>A2;\"APROVADO\";\"NEGADO\"). Com base nos valores das células envolvidas, qual será o resultado exibido em A5?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "NEGADO"
+          },
+          {
+            "letra": "B",
+            "texto": "APROVADO"
+          },
+          {
+            "letra": "C",
+            "texto": "0 (zero)"
+          },
+          {
+            "letra": "D",
+            "texto": "#NOME?"
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q019",
+        "id_questao": "Q019",
+        "numero_sequencial": 19,
+        "numero_prova": 19,
+        "texto_contexto": null,
+        "enunciado": "Em uma planilha do Excel, a coluna A contém uma lista com 142 nomes de servidores de uma prefeitura, sendo um nome por célula. Qual recurso do Excel pode ser utilizado para organizar esses nomes em ordem alfabética?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "=CONT.NÚM(A!)"
+          },
+          {
+            "letra": "B",
+            "texto": "Classificar de A a Z."
+          },
+          {
+            "letra": "C",
+            "texto": "=Média(A1:A142)"
+          },
+          {
+            "letra": "D",
+            "texto": "Colar Especial"
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q020",
+        "id_questao": "Q020",
+        "numero_sequencial": 20,
+        "numero_prova": 20,
+        "texto_contexto": null,
+        "enunciado": "Qual a alternativa que NÃO corresponde a uma fonte disponível no Microsoft Word?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Título 1."
+          },
+          {
+            "letra": "B",
+            "texto": "Sagona."
+          },
+          {
+            "letra": "C",
+            "texto": "Arial."
+          },
+          {
+            "letra": "D",
+            "texto": "Tahoma. Conhecimentos Específicos"
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q021",
+        "id_questao": "Q021",
+        "numero_sequencial": 21,
+        "numero_prova": 21,
+        "texto_contexto": null,
+        "enunciado": "Qual das alternativas a seguir corresponde, de forma mais precisa, à ferramenta da qualidade representada na imagem acima?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Histograma."
+          },
+          {
+            "letra": "B",
+            "texto": "Gráfico de controle."
+          },
+          {
+            "letra": "C",
+            "texto": "Fluxograma."
+          },
+          {
+            "letra": "D",
+            "texto": "Diagrama de causa e efeito."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": true,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q022",
+        "id_questao": "Q022",
+        "numero_sequencial": 22,
+        "numero_prova": 22,
+        "texto_contexto": null,
+        "enunciado": "Qual das alternativas abaixo apresenta uma ação com maior potencial para contribuir efetivamente para o desenvolvimento de uma equipe de projeto?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Incluir o patrocinador do projeto na definição dos requisitos iniciais, assegurando que ele informe as principais restrições de prazo e custo."
+          },
+          {
+            "letra": "B",
+            "texto": "Acompanhar de forma rigorosa os riscos de atraso associados à entrega de um serviço contratado de forma terceirizada."
+          },
+          {
+            "letra": "C",
+            "texto": "Elaborar um relatório final com os dados comparativos entre os custos planejados e os custos reais do projeto."
+          },
+          {
+            "letra": "D",
+            "texto": "Permitir que os membros da equipe participem do planejamento e contribuam com as estimativas de duração das atividades."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": true,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q023",
+        "id_questao": "Q023",
+        "numero_sequencial": 23,
+        "numero_prova": 23,
+        "texto_contexto": null,
+        "enunciado": "No contexto das ferramentas e técnicas utilizadas no gerenciamento de projetos, assinale a alternativa CORRETA:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Aumentar salários, autorizar a realização de horas extras e realizar entregas não solicitadas pelo cliente são práticas recomendadas para promover o desenvolvimento da equipe de projeto."
+          },
+          {
+            "letra": "B",
+            "texto": "Em um cronograma, o caminho crítico representa a sequência de atividades que define a menor duração possível do projeto, sendo composta pelas tarefas que não admitem atrasos sem impactar a data final. AGENTE ADMINISTRATIVO - 1 4 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA=="
+          },
+          {
+            "letra": "C",
+            "texto": "A lista de verificação é a principal ferramenta para medir o desempenho de custos em um projeto, sendo utilizada para controlar o orçamento."
+          },
+          {
+            "letra": "D",
+            "texto": "A verificação de que todos os requisitos foram atendidos é, por si só, suficiente para garantir que o projeto foi concluído com sucesso."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q024",
+        "id_questao": "Q024",
+        "numero_sequencial": 24,
+        "numero_prova": 24,
+        "texto_contexto": null,
+        "enunciado": "No âmbito do gerenciamento da qualidade em projetos, o Benchmarking é uma ferramenta útil para promover a melhoria contínua. Com base nesse conceito, assinale a alternativa CORRETA:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Benchmarking é uma técnica usada exclusivamente para identificar falhas internas nos projetos da própria organização, sem necessidade de comparação externa."
+          },
+          {
+            "letra": "B",
+            "texto": "Benchmarking é o processo de comparar práticas, processos e resultados de projetos próprios ou de outras organizações, com o intuito de identificar boas práticas e orientar melhorias."
+          },
+          {
+            "letra": "C",
+            "texto": "O principal objetivo do Benchmarking é realizar auditorias internas para avaliar o desempenho individual da equipe de projeto."
+          },
+          {
+            "letra": "D",
+            "texto": "Benchmarking limita-se à comparação de projetos da mesma área de aplicação, uma vez que projetos de diferentes áreas não são considerados compatíveis para fins de avaliação de desempenho."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q025",
+        "id_questao": "Q025",
+        "numero_sequencial": 25,
+        "numero_prova": 25,
+        "texto_contexto": null,
+        "enunciado": "No âmbito da administração pública, qual das alternativas a seguir expressa corretamente o conceito de planejamento como função administrativa?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O planejamento é uma função administrativa desnecessária na gestão pública, já que o orçamento anual supre todas as necessidades de previsão de recursos."
+          },
+          {
+            "letra": "B",
+            "texto": "O planejamento tem como foco exclusivo a execução imediata das tarefas, sem se preocupar com metas de médio ou longo prazo."
+          },
+          {
+            "letra": "C",
+            "texto": "O planejamento é um conjunto de ações improvisadas que permite à administração adaptar-se rapidamente a eventos inesperados, sem a necessidade de objetivos previamente definidos."
+          },
+          {
+            "letra": "D",
+            "texto": "O planejamento consiste na definição de objetivos e na escolha prévia do melhor curso de ação para alcançá-los, estabelecendo o que deve ser feito, quando, como e em que sequência."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q026",
+        "id_questao": "Q026",
+        "numero_sequencial": 26,
+        "numero_prova": 26,
+        "texto_contexto": null,
+        "enunciado": "Considerando a classificação de custos em diretos e indiretos segundo os princípios da Contabilidade de Custos, qual das alternativas a seguir apresenta uma CORRETA distinção entre esses dois tipos de custo?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Custos diretos são aqueles que dependem de rateios para serem atribuídos ao objeto de custo; já os custos indiretos são facilmente identificáveis e mensuráveis em relação ao produto."
+          },
+          {
+            "letra": "B",
+            "texto": "Custos diretos não integram o processo de apropriação ao objeto de custo, enquanto os custos indiretos são apropriados de forma integral e direta."
+          },
+          {
+            "letra": "C",
+            "texto": "Custos diretos referem-se exclusivamente aos custos variáveis do processo produtivo; já os custos indiretos referem-se exclusivamente aos custos fixos."
+          },
+          {
+            "letra": "D",
+            "texto": "Custos diretos podem ser atribuídos de maneira objetiva e mensurável ao objeto de custo; enquanto custos indiretos exigem critérios de rateio, por não poderem ser identificados diretamente com os portadores finais de custos."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q027",
+        "id_questao": "Q027",
+        "numero_sequencial": 27,
+        "numero_prova": 27,
+        "texto_contexto": null,
+        "enunciado": "No contexto do gerenciamento de projetos, qual das alternativas a seguir descreve corretamente a finalidade da Estrutura Analítica do Projeto (EAP)?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "A EAP é uma metodologia de avaliação de riscos que permite identificar, classificar e monitorar os eventos que podem afetar negativamente os objetivos do projeto."
+          },
+          {
+            "letra": "B",
+            "texto": "A EAP é um cronograma visual que indica a sequência lógica das atividades do projeto e suas respectivas durações, servindo como base para o controle de prazos."
+          },
+          {
+            "letra": "C",
+            "texto": "A EAP é uma ferramenta para estimar os custos do projeto, organizando os recursos financeiros em centros de custo de forma hierárquica."
+          },
+          {
+            "letra": "D",
+            "texto": "A EAP é uma decomposição hierárquica das entregas e do trabalho do projeto em partes menores e gerenciáveis, orientada para a definição e controle do escopo."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q028",
+        "id_questao": "Q028",
+        "numero_sequencial": 28,
+        "numero_prova": 28,
+        "texto_contexto": null,
+        "enunciado": "Qual alternativa descreve de forma mais CORRETA e completa os elementos que compõem o Balanço Patrimonial da Administração Pública?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O Balanço Patrimonial apresenta a situação patrimonial do ente público, evidenciando os ativos (circulante e não circulante), os passivos (circulante e não circulante), o patrimônio líquido e as contas do subsistema de compensação."
+          },
+          {
+            "letra": "B",
+            "texto": "O Balanço Patrimonial é composto pelos ativos e passivos financeiros e permanentes, sem a inclusão do patrimônio líquido, que é evidenciado apenas no Balanço Financeiro."
+          },
+          {
+            "letra": "C",
+            "texto": "O Balanço Patrimonial evidencia exclusivamente os bens móveis e imóveis pertencentes ao ente público e as obrigações de curto prazo."
+          },
+          {
+            "letra": "D",
+            "texto": "O Balanço Patrimonial da Administração Pública é formado pelas contas de natureza orçamentária, como receitas e despesas, registradas com base no regime de caixa. AGENTE ADMINISTRATIVO - 1 5 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA=="
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q029",
+        "id_questao": "Q029",
+        "numero_sequencial": 29,
+        "numero_prova": 29,
+        "texto_contexto": null,
+        "enunciado": "No contexto da administração pública, qual das alternativas apresenta corretamente uma característica do planejamento estratégico e sua relação com o Plano Plurianual (PPA)?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O planejamento estratégico é amplo, abrange toda a organização, possui menor detalhamento e orienta os planejamentos táticos, sendo o PPA um exemplo na esfera pública."
+          },
+          {
+            "letra": "B",
+            "texto": "O planejamento estratégico é detalhado, de curto prazo e voltado para setores específicos da administração, sendo o PPA um exemplo desse tipo de planejamento."
+          },
+          {
+            "letra": "C",
+            "texto": "O planejamento estratégico ocorre exclusivamente no setor privado, não se aplicando à administração pública nem a instrumentos como o Plano Plurianual."
+          },
+          {
+            "letra": "D",
+            "texto": "O planejamento estratégico tem validade apenas durante o mandato do chefe do Poder Executivo que o elaborou, encerrando-se no último ano de sua gestão."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q030",
+        "id_questao": "Q030",
+        "numero_sequencial": 30,
+        "numero_prova": 30,
+        "texto_contexto": null,
+        "enunciado": "Qual das alternativas apresenta, de forma mais CORRETA e abrangente, um dos elementos essenciais à formulação eficaz de um planejamento estratégico no âmbito organizacional?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O planejamento estratégico é voltado para a execução operacional de tarefas rotineiras e dispensa a análise do ambiente externo."
+          },
+          {
+            "letra": "B",
+            "texto": "O planejamento estratégico prescinde da definição de objetivos claros, já que se baseia em ajustes contínuos e improvisações conforme a conjuntura."
+          },
+          {
+            "letra": "C",
+            "texto": "O planejamento estratégico busca alcançar uma situação ideal a partir da situação atual, exigindo a definição de objetivos, análise de recursos, ambiente e estratégias, além de mecanismos de controle dos resultados."
+          },
+          {
+            "letra": "D",
+            "texto": "O planejamento estratégico tem como principal característica a execução imediata das ações, sem necessidade de avaliação de resultados ou mensuração de desempenho."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q031",
+        "id_questao": "Q031",
+        "numero_sequencial": 31,
+        "numero_prova": 31,
+        "texto_contexto": null,
+        "enunciado": "Com base exclusivamente no disposto no artigo 2º da Constituição Federal de 1988, sem considerar doutrina ou jurisprudência, qual alternativa expressa corretamente o conteúdo do referido artigo?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O artigo 2º da Constituição Federal dispõe que os Poderes da União são autônomos e rivais entre si, garantindo a separação absoluta entre eles."
+          },
+          {
+            "letra": "B",
+            "texto": "O artigo 2º da Constituição Federal prevê que os Poderes da União são o Legislativo, o Executivo e o Judiciário, sendo independentes e harmônicos entre si."
+          },
+          {
+            "letra": "C",
+            "texto": "A Constituição Federal determina que os Poderes da União são organizados de forma unitária, estando todos subordinados ao Poder Executivo."
+          },
+          {
+            "letra": "D",
+            "texto": "A Constituição estabelece que os Poderes da União são subordinados entre si, devendo o Judiciário exercer controle sobre os demais."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q032",
+        "id_questao": "Q032",
+        "numero_sequencial": 32,
+        "numero_prova": 32,
+        "texto_contexto": null,
+        "enunciado": "Com base exclusivamente no artigo 1º e seu parágrafo único da Constituição da República Federativa do Brasil de 1988, sem considerar doutrina ou jurisprudência, qual dos princípios ou fundamentos a seguir NÃO integra os fundamentos da República Federativa do Brasil, conforme expressamente disposto no artigo 1º da Constituição Federal de 1988?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "A dignidade da pessoa humana."
+          },
+          {
+            "letra": "B",
+            "texto": "O pluralismo político."
+          },
+          {
+            "letra": "C",
+            "texto": "A separação dos Poderes."
+          },
+          {
+            "letra": "D",
+            "texto": "A soberania."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q033",
+        "id_questao": "Q033",
+        "numero_sequencial": 33,
+        "numero_prova": 33,
+        "texto_contexto": null,
+        "enunciado": "Com base apenas no artigo 9º, incisos I e II, da Lei nº 12.527/2011 (Lei de Acesso à Informação), e sem recorrer à doutrina ou à jurisprudência, qual alternativa descreve de forma mais CORRETA e completa as formas de assegurar o acesso a informações públicas?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "A divulgação apenas por meios eletrônicos, sem necessidade de atendimento presencial ou consultas públicas."
+          },
+          {
+            "letra": "B",
+            "texto": "A realização exclusiva de audiências públicas, dispensando a criação de serviços presenciais para atendimento ao público."
+          },
+          {
+            "letra": "C",
+            "texto": "A criação de serviço de informações ao cidadão apenas para protocolizar documentos, sem necessidade de atendimento ou orientação."
+          },
+          {
+            "letra": "D",
+            "texto": "A criação de serviço de informações ao cidadão que atenda, oriente, informe sobre tramitação de documentos e protocolize requerimentos, além da realização de audiências ou consultas públicas e incentivo à participação popular."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q034",
+        "id_questao": "Q034",
+        "numero_sequencial": 34,
+        "numero_prova": 34,
+        "texto_contexto": null,
+        "enunciado": "Com base somente no artigo 5º, caput e inciso XIII, da Constituição Federal de 1988, sem considerar doutrina ou jurisprudência, de acordo com a Constituição Federal, qual é a alternativa correta quanto ao exercício profissional no Brasil?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O exercício de qualquer trabalho, ofício ou profissão é livre, independentemente de qualquer exigência legal."
+          },
+          {
+            "letra": "B",
+            "texto": "É livre o exercício de qualquer trabalho, ofício ou profissão, desde que atendidas as qualificações profissionais que a lei estabelecer. AGENTE ADMINISTRATIVO - 1 6 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA=="
+          },
+          {
+            "letra": "C",
+            "texto": "A Constituição permite que apenas brasileiros natos tenham acesso irrestrito a qualquer trabalho, ofício ou profissão."
+          },
+          {
+            "letra": "D",
+            "texto": "O exercício de qualquer trabalho, ofício ou profissão é condicionado à autorização judicial, conforme regulamentação infraconstitucional."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q035",
+        "id_questao": "Q035",
+        "numero_sequencial": 35,
+        "numero_prova": 35,
+        "texto_contexto": null,
+        "enunciado": "Com base somente no artigo 3º, incisos I e II, da Lei nº 12.527/2011, e sem considerar doutrina ou jurisprudência, qual das alternativas a seguir está CORRETA quanto aos procedimentos para assegurar o direito de acesso à informação?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "A publicidade é a regra geral, e o sigilo constitui exceção; além disso, informações de interesse público devem ser divulgadas mesmo sem solicitação."
+          },
+          {
+            "letra": "B",
+            "texto": "O sigilo deve ser a regra, cabendo à Administração decidir quando e se a publicidade se aplica."
+          },
+          {
+            "letra": "C",
+            "texto": "As informações de interesse público devem ser divulgadas apenas mediante solicitação formal do interessado."
+          },
+          {
+            "letra": "D",
+            "texto": "A divulgação de informações de interesse público depende sempre de autorização superior expressa e fundamentada."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q036",
+        "id_questao": "Q036",
+        "numero_sequencial": 36,
+        "numero_prova": 36,
+        "texto_contexto": null,
+        "enunciado": "Com base apenas no artigo 5º, caput e inciso VI, da Constituição da República Federativa do Brasil de 1988, sem considerar doutrina ou jurisprudência, qual das afirmações está de acordo com o disposto na Constituição Federal quanto à liberdade de consciência e de crença?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "A liberdade de consciência e de crença é inviolável, sendo garantido o livre exercício dos cultos religiosos e a proteção legal aos seus locais e liturgias."
+          },
+          {
+            "letra": "B",
+            "texto": "A Constituição garante o direito à liberdade de crença apenas aos brasileiros, não se estendendo aos estrangeiros residentes no país."
+          },
+          {
+            "letra": "C",
+            "texto": "A Constituição assegura o livre exercício dos cultos religiosos, mas não garante proteção aos locais de culto."
+          },
+          {
+            "letra": "D",
+            "texto": "A liberdade de consciência e de crença pode ser restringida por lei ordinária, desde que em nome da segurança nacional."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q037",
+        "id_questao": "Q037",
+        "numero_sequencial": 37,
+        "numero_prova": 37,
+        "texto_contexto": null,
+        "enunciado": "Com base apenas nos incisos XVII, XVIII, XIX e XX do artigo 5º da Constituição Federal de 1988, e sem considerar doutrina ou jurisprudência, qual das alternativas a seguir está CORRETA quanto ao direito de associação?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "As associações só poderão ser compulsoriamente dissolvidas por decisão judicial com trânsito em julgado, e sua suspensão poderá ocorrer por ato administrativo motivado."
+          },
+          {
+            "letra": "B",
+            "texto": "A liberdade de associação é plena, inclusive para fins ilícitos, desde que não haja caráter paramilitar."
+          },
+          {
+            "letra": "C",
+            "texto": "Ninguém pode ser obrigado a associar-se ou a permanecer associado, e é vedada a criação de associações com caráter paramilitar."
+          },
+          {
+            "letra": "D",
+            "texto": "A criação de associações e cooperativas depende de autorização legal prévia e está sujeita à fiscalização direta do Estado."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q038",
+        "id_questao": "Q038",
+        "numero_sequencial": 38,
+        "numero_prova": 38,
+        "texto_contexto": null,
+        "enunciado": "Com base apenas nos incisos I e II do artigo 4º da Lei nº 12.527/2011 (Lei de Acesso à Informação), e sem considerar doutrina ou jurisprudência, qual das alternativas apresenta corretamente a definição legal de \"INFORMAÇÃO\" e \"DOCUMENTO\"?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Informação é qualquer dado armazenado em formato físico, enquanto documento é exclusivamente um registro digital."
+          },
+          {
+            "letra": "B",
+            "texto": "Documento é um conjunto de informações organizadas em meio físico, e informação é o conteúdo textual presente nesse documento."
+          },
+          {
+            "letra": "C",
+            "texto": "Informação e documento são sinônimos e podem ser usados indistintamente para qualquer registro, desde que digital."
+          },
+          {
+            "letra": "D",
+            "texto": "Informação são dados, processados ou não, que servem para produzir e transmitir conhecimento, e documento é a unidade de registro dessas informações, em qualquer suporte ou formato."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q039",
+        "id_questao": "Q039",
+        "numero_sequencial": 39,
+        "numero_prova": 39,
+        "texto_contexto": null,
+        "enunciado": "Com base somente no artigo 3º, incisos III, IV e V, da Lei nº 12.527/2011, e sem considerar doutrina ou jurisprudência, qual das alternativas a seguir expressa corretamente as diretrizes que devem ser observadas nos procedimentos para assegurar o direito de acesso à informação pública?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Limitar o uso da tecnologia da informação à divulgação de dados internos da administração, sem envolver o cidadão no processo de controle."
+          },
+          {
+            "letra": "B",
+            "texto": "Promover a cultura de transparência, estimular o controle social e utilizar os meios tecnológicos disponíveis para viabilizar a comunicação."
+          },
+          {
+            "letra": "C",
+            "texto": "Restringir a transparência para evitar sobrecarga nos sistemas públicos, focando exclusivamente em respostas individuais."
+          },
+          {
+            "letra": "D",
+            "texto": "Priorizar o sigilo como forma de proteger a administração, utilizando a tecnologia da informação apenas quando solicitado pelo interessado."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q040",
+        "id_questao": "Q040",
+        "numero_sequencial": 40,
+        "numero_prova": 40,
+        "texto_contexto": null,
+        "enunciado": "Com base apenas nos incisos III e IV do artigo 4º da Lei nº 12.527/2011 (Lei de Acesso à Informação), e sem considerar doutrina ou jurisprudência, qual das alternativas define corretamente \"INFORMAÇÃO SIGILOSA\" e \"INFORMAÇÃO PESSOAL\"? AGENTE ADMINISTRATIVO - 1 7 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Informação sigilosa é qualquer dado pessoal, independentemente de sua relevância para a segurança pública; informação pessoal é qualquer dado relacionado a pessoas jurídicas."
+          },
+          {
+            "letra": "B",
+            "texto": "Informação pessoal é qualquer dado que a Administração decida manter em sigilo; informação sigilosa é o conjunto de dados pessoais que não podem ser divulgados."
+          },
+          {
+            "letra": "C",
+            "texto": "Informação sigilosa é aquela temporariamente restrita por ser imprescindível à segurança da sociedade e do Estado; informação pessoal é aquela relacionada a pessoa natural identificada ou identificável."
+          },
+          {
+            "letra": "D",
+            "texto": "Informação sigilosa e informação pessoal são sinônimos e ambas devem ser protegidas por igual, sem distinção de finalidade. AGENTE ADMINISTRATIVO - 1 8 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA== RASCUNHO NÃO DESTAQUE AGENTE ADMINISTRATIVO - 1"
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "C"
+      }
+    ],
+    "imagens": [],
+    "metadados": {
+      "versao_processador": "2.0",
+      "total_textos_base": 2,
+      "questoes_com_referencia_imagem": 9,
+      "imagens_adicionadas_manual": 0
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub de Provas</title>
+    <link rel="stylesheet" href="css/hub.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Hub de Provas</h1>
+            <a href="index.html" class="back-btn">← Voltar</a>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="🔍 Buscar por nome, cargo ou organizadora...">
+        </div>
+
+        <div class="filters">
+            <select id="filterOrganizadora">
+                <option value="">Todas as organizadoras</option>
+            </select>
+            <select id="filterCargo">
+                <option value="">Todos os cargos</option>
+            </select>
+            <select id="filterAno">
+                <option value="">Todos os anos</option>
+            </select>
+        </div>
+
+        <div id="loading" class="loading">Carregando provas...</div>
+        
+        <div id="provasContainer" class="provas-grid"></div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <p>Nenhuma prova encontrada</p>
+        </div>
+    </div>
+
+    <script src="js/hub.js"></script>
+</body>
+</html>
