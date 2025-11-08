@@ -74,58 +74,58 @@
                 });
         }
 
-
-        // NOVO SCRIPT PARA CARREGAR AS 4 PROVAS RECENTES
+        
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('recentProvasContainer');
             const loading = document.getElementById('loadingRecent');
-            
-            // Assume que o index.json está em .data/provas/index.json
-            fetch('data/provas/index.json', { cache: 'no-store' })
-
+        
+            fetch('data/provas/index.json', { cache: "no-store" })
                 .then(response => {
                     if (!response.ok) throw new Error("Index de provas não encontrado.");
                     return response.json();
                 })
-                .then(data => {
+                .then(async data => {
                     loading.style.display = 'none';
-
-                    // 1. Seleciona as primeiras 4 provas (assumindo que já estão ordenadas por data/ID)
-                    const recentProvas = data.provas.slice(0, 4);
-
-                    if (recentProvas.length === 0) {
-                        container.innerHTML = '<p class="no-recent-results">Nenhuma prova recente encontrada.</p>';
+                    const arquivos = Array.isArray(data.provas) ? data.provas.slice(0, 4) : [];
+        
+                    if (arquivos.length === 0) {
+                        container.innerHTML = '<p class="no-recent-results">Nenhuma prova encontrada.</p>';
                         return;
                     }
-
-                    // 2. Cria os cards HTML (utilizando a estrutura de card do hub.css)
-                    recentProvas.forEach(prova => {
-                        const card = document.createElement('div');
-                        // Usamos a classe 'prova-card' definida no hub.css para manter o visual quadrado
-                        card.classList.add('prova-card'); 
-                        card.setAttribute('onclick', `window.location.href='prova.html?id=${prova.id}'`);
-                        
-                        card.innerHTML = `
-                            <h3>${prova.nome}</h3>
-                            <div class="prova-meta">
-                                <span>${prova.organizadora}</span>
-                                <span>${prova.ano}</span>
-                            </div>
-                            <div class="prova-stats">
-                                <span>Cargo: ${prova.cargo}</span>
-                            </div>
-                        `;
-                        container.appendChild(card);
-                    });
+        
+                    for (const file of arquivos) {
+                        try {
+                            const res = await fetch(`data/provas/${file}`, { cache: "no-store" });
+                            if (!res.ok) continue;
+                            const provaJson = await res.json();
+                            const prova = provaJson.prova || provaJson; // compatibilidade
+        
+                            const card = document.createElement('div');
+                            card.classList.add('prova-card');
+                            card.addEventListener('click', () => window.location.href = `prova.html?id=${prova.id}`);
+        
+                            card.innerHTML = `
+                                <h3>${prova.nome_prova || 'Prova sem nome'}</h3>
+                                <div class="prova-meta">
+                                    <span>${prova.organizadora || 'Organizadora desconhecida'}</span>
+                                </div>
+                            `;
+                            container.appendChild(card);
+                        } catch (err) {
+                            console.error('Erro ao carregar prova recente:', file, err);
+                        }
+                    }
                 })
                 .catch(error => {
                     console.error('Erro ao carregar provas recentes:', error);
-                    loading.textContent = 'Não foi possível carregar as provas. Verifique o caminho do index.json.';
+                    loading.textContent = 'Não foi possível carregar as provas recentes.';
                     loading.classList.add('error');
                 });
         });
+
     </script>
 </body>
 
 </html>
+
 
