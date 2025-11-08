@@ -1,0 +1,1196 @@
+{
+  "prova": {
+    "id": "d5a5c041-a121-4c5e-b8dc-d8024f6fd89a",
+    "nome_prova": "agente administrativo MUNICÍPIO DE CALUMBI (PE)",
+    "cargo": "agente administrativo",
+    "organizadora": "igeduc",
+    "ano": "2024",
+    "data_processamento": "2025-11-08T12:55:11.365856",
+    "total_questoes": 40,
+    "textos_base": [
+      {
+        "id": "texto_base_1",
+        "titulo": "O texto seguinte servirá de base para responder às questões de 1 a 5.",
+        "conteudo": "O que é dessalinização da água? A dessalinização da água é um procedimento que foi mencionado pela primeira vez na Antiguidade, quando Aristóteles observou princípios físicos que permitiam separar a água do sal por meio da evaporação e da condensação, como explica um documento técnico dedicado ao tema do Programa Hidrológico Internacional da Unesco para a América Latina e o Caribe (PHI). Também conforme definido pelo PHI, a dessalinização é um processo que converte água salgada, principalmente do mar, em água doce adequada para consumo humano e outros usos. A dessalinização é um processo de extração de sal da água do mar para produzir água potável. O Programa das Nações Unidas para o Meio Ambiente (Pnuma) indica que esse método requer alto consumo de energia e, às vezes, o uso de combustíveis fósseis. Embora seja possível usar fontes de energia de baixo carbono para operar usinas de dessalinização e, assim, reduzir as emissões, o descarte da salmoura no oceano continua sendo um desafio. Isso se deve ao fato de que, às vezes, a diluição da salmoura não ocorre imediatamente. Mas segundo um estudo sobre o tema publicado pelo Ministério do Meio Ambiente da Espanha, se esse processo for bem feito, a água descartada no mar não causa danos à fauna e à flora marinhas. No processo de dessalinização, para cada litro de água potável produzido, são gerados cerca de 1,5 litro de líquido residual contendo poluentes como cloro e cobre, de acordo com o estudo do Pnuma. Esse resíduo, conhecido como \"concentrado\", é cerca de duas vezes mais salino do que a água do oceano. A fonte ambiental diz: \"Se ele não for adequadamente diluído e disperso, pode formar uma coluna densa de salmoura tóxica que, se não for tratada, provavelmente degradará os ecossistemas costeiros e marinhos\". https://www.nationalgeographicbrasil.com/meio-ambiente/2024/11/o-qu e-e-dessalinizacao-da-agua",
+        "questoes_relacionadas": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "questao_inicio": 1,
+        "questao_fim": 5
+      }
+    ],
+    "questoes": [
+      {
+        "id": "Q001",
+        "id_questao": "Q001",
+        "numero_sequencial": 1,
+        "numero_prova": 1,
+        "texto_contexto": "O que é dessalinização da água? A dessalinização da água é um procedimento que foi mencionado pela primeira vez na Antiguidade, quando Aristóteles observou princípios físicos que permitiam separar a água do sal por meio da evaporação e da condensação, como explica um documento técnico dedicado ao tema do Programa Hidrológico Internacional da Unesco para a América Latina e o Caribe (PHI). Também conforme definido pelo PHI, a dessalinização é um processo que converte água salgada, principalmente do mar, em água doce adequada para consumo humano e outros usos. A dessalinização é um processo de extração de sal da água do mar para produzir água potável. O Programa das Nações Unidas para o Meio Ambiente (Pnuma) indica que esse método requer alto consumo de energia e, às vezes, o uso de combustíveis fósseis. Embora seja possível usar fontes de energia de baixo carbono para operar usinas de dessalinização e, assim, reduzir as emissões, o descarte da salmoura no oceano continua sendo um desafio. Isso se deve ao fato de que, às vezes, a diluição da salmoura não ocorre imediatamente. Mas segundo um estudo sobre o tema publicado pelo Ministério do Meio Ambiente da Espanha, se esse processo for bem feito, a água descartada no mar não causa danos à fauna e à flora marinhas. No processo de dessalinização, para cada litro de água potável produzido, são gerados cerca de 1,5 litro de líquido residual contendo poluentes como cloro e cobre, de acordo com o estudo do Pnuma. Esse resíduo, conhecido como \"concentrado\", é cerca de duas vezes mais salino do que a água do oceano. A fonte ambiental diz: \"Se ele não for adequadamente diluído e disperso, pode formar uma coluna densa de salmoura tóxica que, se não for tratada, provavelmente degradará os ecossistemas costeiros e marinhos\". https://www.nationalgeographicbrasil.com/meio-ambiente/2024/11/o-qu e-e-dessalinizacao-da-agua",
+        "enunciado": "Qual é a principal característica do processo de dessalinização mencionada no texto?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Ele é um método simples e de baixo consumo energético."
+          },
+          {
+            "letra": "B",
+            "texto": "Ele elimina completamente a dependência de fontes de energia convencionais."
+          },
+          {
+            "letra": "C",
+            "texto": "Ele requer alto consumo de energia e pode usar combustíveis fósseis."
+          },
+          {
+            "letra": "D",
+            "texto": "Ele utiliza energia renovável em todas as etapas."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q002",
+        "id_questao": "Q002",
+        "numero_sequencial": 2,
+        "numero_prova": 2,
+        "texto_contexto": "O que é dessalinização da água? A dessalinização da água é um procedimento que foi mencionado pela primeira vez na Antiguidade, quando Aristóteles observou princípios físicos que permitiam separar a água do sal por meio da evaporação e da condensação, como explica um documento técnico dedicado ao tema do Programa Hidrológico Internacional da Unesco para a América Latina e o Caribe (PHI). Também conforme definido pelo PHI, a dessalinização é um processo que converte água salgada, principalmente do mar, em água doce adequada para consumo humano e outros usos. A dessalinização é um processo de extração de sal da água do mar para produzir água potável. O Programa das Nações Unidas para o Meio Ambiente (Pnuma) indica que esse método requer alto consumo de energia e, às vezes, o uso de combustíveis fósseis. Embora seja possível usar fontes de energia de baixo carbono para operar usinas de dessalinização e, assim, reduzir as emissões, o descarte da salmoura no oceano continua sendo um desafio. Isso se deve ao fato de que, às vezes, a diluição da salmoura não ocorre imediatamente. Mas segundo um estudo sobre o tema publicado pelo Ministério do Meio Ambiente da Espanha, se esse processo for bem feito, a água descartada no mar não causa danos à fauna e à flora marinhas. No processo de dessalinização, para cada litro de água potável produzido, são gerados cerca de 1,5 litro de líquido residual contendo poluentes como cloro e cobre, de acordo com o estudo do Pnuma. Esse resíduo, conhecido como \"concentrado\", é cerca de duas vezes mais salino do que a água do oceano. A fonte ambiental diz: \"Se ele não for adequadamente diluído e disperso, pode formar uma coluna densa de salmoura tóxica que, se não for tratada, provavelmente degradará os ecossistemas costeiros e marinhos\". https://www.nationalgeographicbrasil.com/meio-ambiente/2024/11/o-qu e-e-dessalinizacao-da-agua",
+        "enunciado": "O que é a dessalinização da água, conforme descrito no texto?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Um método de separar o sal da água utilizando apenas filtragem mecânica."
+          },
+          {
+            "letra": "B",
+            "texto": "Uma técnica exclusivamente moderna desenvolvida a partir de estudos da Unesco."
+          },
+          {
+            "letra": "C",
+            "texto": "Um procedimento que converte água salgada em água doce para consumo humano e outros usos."
+          },
+          {
+            "letra": "D",
+            "texto": "Um processo que transforma a água doce em água salgada por meio de evaporação e condensação."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q003",
+        "id_questao": "Q003",
+        "numero_sequencial": 3,
+        "numero_prova": 3,
+        "texto_contexto": "O que é dessalinização da água? A dessalinização da água é um procedimento que foi mencionado pela primeira vez na Antiguidade, quando Aristóteles observou princípios físicos que permitiam separar a água do sal por meio da evaporação e da condensação, como explica um documento técnico dedicado ao tema do Programa Hidrológico Internacional da Unesco para a América Latina e o Caribe (PHI). Também conforme definido pelo PHI, a dessalinização é um processo que converte água salgada, principalmente do mar, em água doce adequada para consumo humano e outros usos. A dessalinização é um processo de extração de sal da água do mar para produzir água potável. O Programa das Nações Unidas para o Meio Ambiente (Pnuma) indica que esse método requer alto consumo de energia e, às vezes, o uso de combustíveis fósseis. Embora seja possível usar fontes de energia de baixo carbono para operar usinas de dessalinização e, assim, reduzir as emissões, o descarte da salmoura no oceano continua sendo um desafio. Isso se deve ao fato de que, às vezes, a diluição da salmoura não ocorre imediatamente. Mas segundo um estudo sobre o tema publicado pelo Ministério do Meio Ambiente da Espanha, se esse processo for bem feito, a água descartada no mar não causa danos à fauna e à flora marinhas. No processo de dessalinização, para cada litro de água potável produzido, são gerados cerca de 1,5 litro de líquido residual contendo poluentes como cloro e cobre, de acordo com o estudo do Pnuma. Esse resíduo, conhecido como \"concentrado\", é cerca de duas vezes mais salino do que a água do oceano. A fonte ambiental diz: \"Se ele não for adequadamente diluído e disperso, pode formar uma coluna densa de salmoura tóxica que, se não for tratada, provavelmente degradará os ecossistemas costeiros e marinhos\". https://www.nationalgeographicbrasil.com/meio-ambiente/2024/11/o-qu e-e-dessalinizacao-da-agua",
+        "enunciado": "Quais poluentes estão presentes no líquido residual gerado no processo de dessalinização, conforme o texto?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Nitrato e fosfato."
+          },
+          {
+            "letra": "B",
+            "texto": "Cloro e cobre."
+          },
+          {
+            "letra": "C",
+            "texto": "Mercúrio e chumbo."
+          },
+          {
+            "letra": "D",
+            "texto": "Ferro e enxofre."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q004",
+        "id_questao": "Q004",
+        "numero_sequencial": 4,
+        "numero_prova": 4,
+        "texto_contexto": "O que é dessalinização da água? A dessalinização da água é um procedimento que foi mencionado pela primeira vez na Antiguidade, quando Aristóteles observou princípios físicos que permitiam separar a água do sal por meio da evaporação e da condensação, como explica um documento técnico dedicado ao tema do Programa Hidrológico Internacional da Unesco para a América Latina e o Caribe (PHI). Também conforme definido pelo PHI, a dessalinização é um processo que converte água salgada, principalmente do mar, em água doce adequada para consumo humano e outros usos. A dessalinização é um processo de extração de sal da água do mar para produzir água potável. O Programa das Nações Unidas para o Meio Ambiente (Pnuma) indica que esse método requer alto consumo de energia e, às vezes, o uso de combustíveis fósseis. Embora seja possível usar fontes de energia de baixo carbono para operar usinas de dessalinização e, assim, reduzir as emissões, o descarte da salmoura no oceano continua sendo um desafio. Isso se deve ao fato de que, às vezes, a diluição da salmoura não ocorre imediatamente. Mas segundo um estudo sobre o tema publicado pelo Ministério do Meio Ambiente da Espanha, se esse processo for bem feito, a água descartada no mar não causa danos à fauna e à flora marinhas. No processo de dessalinização, para cada litro de água potável produzido, são gerados cerca de 1,5 litro de líquido residual contendo poluentes como cloro e cobre, de acordo com o estudo do Pnuma. Esse resíduo, conhecido como \"concentrado\", é cerca de duas vezes mais salino do que a água do oceano. A fonte ambiental diz: \"Se ele não for adequadamente diluído e disperso, pode formar uma coluna densa de salmoura tóxica que, se não for tratada, provavelmente degradará os ecossistemas costeiros e marinhos\". https://www.nationalgeographicbrasil.com/meio-ambiente/2024/11/o-qu e-e-dessalinizacao-da-agua",
+        "enunciado": "Qual é o impacto ambiental potencial do resíduo gerado no processo de dessalinização, segundo o texto?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Ele aumenta a acidez da água do mar, prejudicando os corais."
+          },
+          {
+            "letra": "B",
+            "texto": "Ele polui o ar com partículas salinas prejudiciais à saúde."
+          },
+          {
+            "letra": "C",
+            "texto": "Ele torna a água do oceano imprópria para consumo humano."
+          },
+          {
+            "letra": "D",
+            "texto": "Ele forma uma coluna de salmoura tóxica que pode degradar ecossistemas marinhos."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q005",
+        "id_questao": "Q005",
+        "numero_sequencial": 5,
+        "numero_prova": 5,
+        "texto_contexto": "O que é dessalinização da água? A dessalinização da água é um procedimento que foi mencionado pela primeira vez na Antiguidade, quando Aristóteles observou princípios físicos que permitiam separar a água do sal por meio da evaporação e da condensação, como explica um documento técnico dedicado ao tema do Programa Hidrológico Internacional da Unesco para a América Latina e o Caribe (PHI). Também conforme definido pelo PHI, a dessalinização é um processo que converte água salgada, principalmente do mar, em água doce adequada para consumo humano e outros usos. A dessalinização é um processo de extração de sal da água do mar para produzir água potável. O Programa das Nações Unidas para o Meio Ambiente (Pnuma) indica que esse método requer alto consumo de energia e, às vezes, o uso de combustíveis fósseis. Embora seja possível usar fontes de energia de baixo carbono para operar usinas de dessalinização e, assim, reduzir as emissões, o descarte da salmoura no oceano continua sendo um desafio. Isso se deve ao fato de que, às vezes, a diluição da salmoura não ocorre imediatamente. Mas segundo um estudo sobre o tema publicado pelo Ministério do Meio Ambiente da Espanha, se esse processo for bem feito, a água descartada no mar não causa danos à fauna e à flora marinhas. No processo de dessalinização, para cada litro de água potável produzido, são gerados cerca de 1,5 litro de líquido residual contendo poluentes como cloro e cobre, de acordo com o estudo do Pnuma. Esse resíduo, conhecido como \"concentrado\", é cerca de duas vezes mais salino do que a água do oceano. A fonte ambiental diz: \"Se ele não for adequadamente diluído e disperso, pode formar uma coluna densa de salmoura tóxica que, se não for tratada, provavelmente degradará os ecossistemas costeiros e marinhos\". https://www.nationalgeographicbrasil.com/meio-ambiente/2024/11/o-qu e-e-dessalinizacao-da-agua",
+        "enunciado": "Qual é o principal desafio ambiental relacionado ao processo de dessalinização mencionado no texto?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "A impossibilidade de usar fontes de energia de baixo carbono."
+          },
+          {
+            "letra": "B",
+            "texto": "O descarte da salmoura no oceano, que pode não se diluir imediatamente."
+          },
+          {
+            "letra": "C",
+            "texto": "A falta de estudos sobre os impactos ambientais do processo."
+          },
+          {
+            "letra": "D",
+            "texto": "O custo elevado das usinas de dessalinização. AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:U2F0LCAwOCBOb3YgMjAyNSAxMjo0MjozMCAtMDMwMA=="
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q006",
+        "id_questao": "Q006",
+        "numero_sequencial": 6,
+        "numero_prova": 6,
+        "texto_contexto": null,
+        "enunciado": "Julgue as sentenças abaixo como VERDADEIRAS ou FALSAS: (__)O ambiente Windows, desenvolvido pela Microsoft, é um dos sistemas operacionais mais amplamente utilizados, sendo conhecido por sua interface gráfica intuitiva, ampla compatibilidade de software e estrutura modular de gerenciamento. (__)O núcleo do Windows, chamado thread, é responsável pelas operações críticas, como o gerenciamento de processos, memória e drivers de dispositivos. (__)O Windows é um sistema operacional baseado em arquitetura monolítica modular, ou seja, embora seu núcleo seja monolítico (um único bloco de código que executa operações de baixo nível), ele permite a integração de módulos adicionais, facilitando a escalabilidade e adaptabilidade. A sequência CORRETA é:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "V, F, V."
+          },
+          {
+            "letra": "B",
+            "texto": "F, V, V."
+          },
+          {
+            "letra": "C",
+            "texto": "V, V, F."
+          },
+          {
+            "letra": "D",
+            "texto": "V, F, F."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q007",
+        "id_questao": "Q007",
+        "numero_sequencial": 7,
+        "numero_prova": 7,
+        "texto_contexto": null,
+        "enunciado": "Leia com atenção a afirmativa abaixo: Sendo assim, João, você não está autorizado a sair. Qual é a função das vírgulas empregadas na afirmativa lida?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Separar termos com a mesma função sintática."
+          },
+          {
+            "letra": "B",
+            "texto": "Separar o vocativo."
+          },
+          {
+            "letra": "C",
+            "texto": "Separar o sujeito do predicado."
+          },
+          {
+            "letra": "D",
+            "texto": "Separar o aposto."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q008",
+        "id_questao": "Q008",
+        "numero_sequencial": 8,
+        "numero_prova": 8,
+        "texto_contexto": null,
+        "enunciado": "Leia com atenção as afirmativas abaixo: I.Encontrar-te-ei assim que os sinos tocarem. II.Observou-me lavar o carro. III.Perguntou-me se poderia ajudá-lo. IV.Calar-me-ei diante de tamanho despreparo. V.Não lhe responderei nada do que perguntas. Em quais das afirmativas lidas há o emprego de mesóclise?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "I e IV."
+          },
+          {
+            "letra": "B",
+            "texto": "I, III e V."
+          },
+          {
+            "letra": "C",
+            "texto": "II e IV."
+          },
+          {
+            "letra": "D",
+            "texto": "II e III."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q009",
+        "id_questao": "Q009",
+        "numero_sequencial": 9,
+        "numero_prova": 9,
+        "texto_contexto": null,
+        "enunciado": "A função QUERY no Google Planilhas permite realizar consultas em intervalos de dados utilizando uma linguagem semelhante ao SQL. Sobre a aplicação da função QUERY, qual das alternativas está correta?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Para aplicar a QUERY, os cabeçalhos das colunas devem ser necessariamente configurados como valores numéricos para que a função identifique os dados corretamente."
+          },
+          {
+            "letra": "B",
+            "texto": "A função QUERY utiliza como primeiro parâmetro o intervalo de dados, seguido pela string de consulta, e opcionalmente o parâmetro para indicar o formato das datas no intervalo."
+          },
+          {
+            "letra": "C",
+            "texto": "É utilizada exclusivamente para realizar cálculos matemáticos avançados em grandes intervalos de dados, exigindo que os resultados sejam exportados para outra planilha."
+          },
+          {
+            "letra": "D",
+            "texto": "A QUERY só aceita strings de consulta que utilizem operadores booleanos básicos, como AND e OR, não suportando funções agregadas como SUM ou AVERAGE."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q010",
+        "id_questao": "Q010",
+        "numero_sequencial": 10,
+        "numero_prova": 10,
+        "texto_contexto": null,
+        "enunciado": "Em uma planilha do Microsoft Excel, um analista está lidando com uma grande quantidade de dados financeiros e deseja identificar rapidamente as células que possuem valores duplicados em uma coluna. Qual é o recurso mais adequado para essa tarefa?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Tabela Dinâmica, com aplicação de um campo de contagem para identificar duplicados."
+          },
+          {
+            "letra": "B",
+            "texto": "Formatação Condicional, utilizando a regra \"Valores Duplicados\"."
+          },
+          {
+            "letra": "C",
+            "texto": "Filtro Avançado, aplicando um critério de exclusão de duplicados."
+          },
+          {
+            "letra": "D",
+            "texto": "Ordenação, seguida de filtragem manual para identificar duplicados."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q011",
+        "id_questao": "Q011",
+        "numero_sequencial": 11,
+        "numero_prova": 11,
+        "texto_contexto": null,
+        "enunciado": "Leia atenciosamente as alternativas abaixo e assinale aquela que possui a concordância nominal incorreta:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Carlos apreciava as músicas e o comércio marroquino."
+          },
+          {
+            "letra": "B",
+            "texto": "Carlos apreciava o comércio e as músicas marroquinas."
+          },
+          {
+            "letra": "C",
+            "texto": "Carlos apreciava o comércio e as músicas marroquinos."
+          },
+          {
+            "letra": "D",
+            "texto": "Carlos apreciava as músicas e o comércio marroquinas. AGENTE ADMINISTRATIVO - 1 2 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:U2F0LCAwOCBOb3YgMjAyNSAxMjo0MjozMCAtMDMwMA=="
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q012",
+        "id_questao": "Q012",
+        "numero_sequencial": 12,
+        "numero_prova": 12,
+        "texto_contexto": null,
+        "enunciado": "No Microsoft Word, um redator deseja gerar um sumário automático que seja atualizado sempre que o documento for editado. Qual das alternativas abaixo descreve corretamente os passos para a criação desse sumário?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Inserir o sumário por meio da opção \"Índice\" no menu \"Exibir\"."
+          },
+          {
+            "letra": "B",
+            "texto": "Inserir o sumário no início do documento e numerar as seções manualmente."
+          },
+          {
+            "letra": "C",
+            "texto": "Criar uma tabela e listar manualmente os títulos e os números de página."
+          },
+          {
+            "letra": "D",
+            "texto": "Utilizar a função \"Estilos\" para formatar os títulos e inserir o sumário a partir do menu \"Referências\"."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": true,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q013",
+        "id_questao": "Q013",
+        "numero_sequencial": 13,
+        "numero_prova": 13,
+        "texto_contexto": null,
+        "enunciado": "A gestão de riscos é uma parte essencial da segurança da informação. O processo de gestão de riscos inclui, EXCETO:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Tratamento de Risco."
+          },
+          {
+            "letra": "B",
+            "texto": "Análise de Impacto nos Negócios (BIA)."
+          },
+          {
+            "letra": "C",
+            "texto": "Avaliação de Risco."
+          },
+          {
+            "letra": "D",
+            "texto": "Criptografia Assimétrica."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q014",
+        "id_questao": "Q014",
+        "numero_sequencial": 14,
+        "numero_prova": 14,
+        "texto_contexto": null,
+        "enunciado": "Em Google Documentos, um usuário deseja inserir uma tabela com cabeçalho fixo para facilitar a leitura dos dados em todas as páginas do documento, caso ele se estenda para várias páginas. A melhor forma de alcançar esse objetivo é:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Utilizar a opção \"Congelar cabeçalhos\" no menu de \"Tabela\"."
+          },
+          {
+            "letra": "B",
+            "texto": "Configurar a opção \"Repetir linha de cabeçalho\" nas propriedades da tabela."
+          },
+          {
+            "letra": "C",
+            "texto": "Copiar e colar manualmente a linha de cabeçalho em cada nova página."
+          },
+          {
+            "letra": "D",
+            "texto": "Habilitar a opção \"Fixar linha superior\" na barra de ferramentas."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q015",
+        "id_questao": "Q015",
+        "numero_sequencial": 15,
+        "numero_prova": 15,
+        "texto_contexto": null,
+        "enunciado": "Qual das práticas a seguir é considerada mais eficaz para evitar ataques de phishing em um ambiente corporativo?",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Proibir o uso de e-mails pessoais para todos os funcionários."
+          },
+          {
+            "letra": "B",
+            "texto": "Instalar bloqueadores de pop-ups em todos os navegadores da empresa."
+          },
+          {
+            "letra": "C",
+            "texto": "Ensinar os funcionários a identificar e reportar e-mails suspeitos."
+          },
+          {
+            "letra": "D",
+            "texto": "Configurar senhas complexas para acesso ao sistema interno. CONHECIMENTOS ESPECÍFICOS"
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q016",
+        "id_questao": "Q016",
+        "numero_sequencial": 16,
+        "numero_prova": 16,
+        "texto_contexto": null,
+        "enunciado": "A publicação oficial, utilizada na comunicação formal de órgãos públicos, deve seguir determinados atributos para garantir a transmissão das informações. Esses atributos orientam a linguagem e a estrutura dos documentos administrativos, garantindo que sejam compreendidos por todos os destinatários. Avalie as alternativas a seguir qual apresenta um atributo que não é específico da redação oficial:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Clareza."
+          },
+          {
+            "letra": "B",
+            "texto": "Concisão."
+          },
+          {
+            "letra": "C",
+            "texto": "Subjetividade."
+          },
+          {
+            "letra": "D",
+            "texto": "Formalidade."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q017",
+        "id_questao": "Q017",
+        "numero_sequencial": 17,
+        "numero_prova": 17,
+        "texto_contexto": null,
+        "enunciado": "Considere as atribuições dos poderes administrativos, com base nos princípios da Administração Pública. Assinale a alternativa correta sobre o poder disciplinar, o poder hierárquico, o poder regulamentar e o poder de polícia.",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O poder de polícia refere-se ao poder da Administração Pública para regulamentações suas próprias atividades internas e corrige desvios funcionais de seus agentes."
+          },
+          {
+            "letra": "B",
+            "texto": "O poder hierárquico permite à Administração Pública aplicar avaliações aos servidores e cidadãos que descumpram as normas administrativas."
+          },
+          {
+            "letra": "C",
+            "texto": "O poder disciplinar é aquele por meio do qual a Administração Pública organiza internamente sua estrutura, distribuindo e escalonando funções e atividades."
+          },
+          {
+            "letra": "D",
+            "texto": "O poder regulamentar possibilita a criação de normas complementares para o cumprimento das leis, por meio de regulamentos e decretos. AGENTE ADMINISTRATIVO - 1 3 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:U2F0LCAwOCBOb3YgMjAyNSAxMjo0MjozMCAtMDMwMA=="
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q018",
+        "id_questao": "Q018",
+        "numero_sequencial": 18,
+        "numero_prova": 18,
+        "texto_contexto": null,
+        "enunciado": "De acordo com a Lei nº 12.527/2011 (Lei de Acesso à Informação), que trata da classificação das informações quanto ao grau e prazos de sigilo, assinale a alternativa correta sobre as situações em que a divulgação de informações pode ser restrita:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "As informações de divulgação cuja divulgação possa prejudicar a saúde da população ou colocar em risco a soberania nacional são consideradas imprescindíveis à segurança da sociedade ou do Estado."
+          },
+          {
+            "letra": "B",
+            "texto": "As informações podem ser importantes como sigilosas apenas quando estiverem relacionadas a aspectos financeiros e econômicos, sem levar em conta outros riscos à segurança nacional."
+          },
+          {
+            "letra": "C",
+            "texto": "As informações podem ser importantes como sigilosas se sua divulgação comprometer a estabilidade política do País, independentemente do risco à segurança nacional."
+          },
+          {
+            "letra": "D",
+            "texto": "A classificação das informações é restrita apenas para pessoas que podem prejudicar as relações comerciais internacionais, sem afetar outras áreas sensíveis como a defesa ou a saúde pública."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q019",
+        "id_questao": "Q019",
+        "numero_sequencial": 19,
+        "numero_prova": 19,
+        "texto_contexto": null,
+        "enunciado": "Leia as asserções a seguir e responda: I.O gerenciamento de projetos envolve o planejamento, execução, monitoramento e controle de todas as etapas de um projeto, com o objetivo de atingir seus objetivos dentro do prazo, orçamento e qualidade construído. PORTANTO, II.A aplicação de boas práticas no gerenciamento de projetos garante que os recursos alocados sejam de forma eficiente, os riscos sejam identificados e mitigados, e os resultados atendam às expectativas das partes interessadas, garantindo o sucesso do projeto. A respeito dessas asserções, assinale a opção correta:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "A asserção I é uma proposição verdadeira e a II é uma proposição falsa."
+          },
+          {
+            "letra": "B",
+            "texto": "As asserções I e II são proposições verdadeiras e a II é uma justificativa correta da I."
+          },
+          {
+            "letra": "C",
+            "texto": "A asserção I é uma proposição falsa e a II é uma proposição verdadeira."
+          },
+          {
+            "letra": "D",
+            "texto": "As asserções I e II são proposições falsas."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q020",
+        "id_questao": "Q020",
+        "numero_sequencial": 20,
+        "numero_prova": 20,
+        "texto_contexto": null,
+        "enunciado": "De acordo com os objetivos fundamentais da República Federativa do Brasil, estabelecidos na Constituição Federal, assinale a alternativa que apresenta um dos objetivos que visam promover a justiça social e a igualdade entre os cidadãos brasileiros:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Erradicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais."
+          },
+          {
+            "letra": "B",
+            "texto": "Proteger os direitos de propriedade privada, sem restrições."
+          },
+          {
+            "letra": "C",
+            "texto": "Assegurar a liberdade econômica e a concorrência no mercado."
+          },
+          {
+            "letra": "D",
+            "texto": "Garantir a soberania nacional e a integridade do território."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Gerais",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q021",
+        "id_questao": "Q021",
+        "numero_sequencial": 21,
+        "numero_prova": 21,
+        "texto_contexto": null,
+        "enunciado": "Em uma organização, é essencial traçar os rumos que ela deve seguir para alcançar seus objetivos. Para isso, a administração deve, primeiramente, planejar as ações possíveis, levando em consideração os recursos disponíveis e os resultados desejados. Esse processo envolve uma definição de metas, uma previsão de recursos e uma elaboração de estratégias para atingir os objetivos. Após o planejamento, vem a organização, que se refere ao processo de organizar e estruturar os recursos humanos, financeiros e materiais de forma eficiente, estabelecendo responsabilidades e organizando tarefas para garantir que o plano seja executado de forma eficaz. Assinale a alternativa que corresponda à função administrativa descrita no texto:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Direção e organização."
+          },
+          {
+            "letra": "B",
+            "texto": "Coordenação e direção."
+          },
+          {
+            "letra": "C",
+            "texto": "Planejamento e organização."
+          },
+          {
+            "letra": "D",
+            "texto": "Controle e planejamento."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q022",
+        "id_questao": "Q022",
+        "numero_sequencial": 22,
+        "numero_prova": 22,
+        "texto_contexto": null,
+        "enunciado": "O _________________ é uma demonstração contábil que apresenta a posição financeira de uma empresa. Ele é composto por três partes: ativo (bens e direitos), passivo (obrigações) e patrimônio líquido (diferença entre ativo e passivo, representando os recursos próprios da empresa). O ativo é dividido entre circulante e não circulante, e o passivo entre exigível a curto e longo prazo. O patrimônio líquido reflete o valor que pertence aos sócios ou acionistas após deduzir as obrigações. Assinale a alternativa que corretamente completa a lacuna no excerto:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Demonstração do Fluxo de Caixa"
+          },
+          {
+            "letra": "B",
+            "texto": "Relatório de Auditoria"
+          },
+          {
+            "letra": "C",
+            "texto": "Demonstrativo de Resultados"
+          },
+          {
+            "letra": "D",
+            "texto": "Balanço Patrimonial AGENTE ADMINISTRATIVO - 1 4 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:U2F0LCAwOCBOb3YgMjAyNSAxMjo0MjozMCAtMDMwMA=="
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q023",
+        "id_questao": "Q023",
+        "numero_sequencial": 23,
+        "numero_prova": 23,
+        "texto_contexto": null,
+        "enunciado": "Considere as seguintes afirmativas sobre o Demonstrativo de Resultados do Exercício (DRE). Assinale V (verdadeiro) para as afirmativas corretas e F (falso) para as incorretas: (__)O Demonstrativo de Resultados do Exercício (DRE) é uma demonstração contábil que visa apresentar o desempenho financeiro da empresa em um determinado período, detalhando as receitas, despesas, lucros e prejuízos. (__)A estrutura do DRE inclui apenas as receitas operacionais, sem considerar as despesas e o lucro líquido da empresa. (__)O DRE é uma ferramenta essencial para a análise da rentabilidade da empresa, ajudando os gestores a avaliarem a eficiência operacional e a previsão financeira do negócio. Assinale a alternativa que apresenta a sequência correta:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "V, F e V."
+          },
+          {
+            "letra": "B",
+            "texto": "F, V e V."
+          },
+          {
+            "letra": "C",
+            "texto": "V, V e V."
+          },
+          {
+            "letra": "D",
+            "texto": "F, F e V."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q024",
+        "id_questao": "Q024",
+        "numero_sequencial": 24,
+        "numero_prova": 24,
+        "texto_contexto": null,
+        "enunciado": "Relacione corretamente as colunas a seguir, associando cada princípio do Programa 5S com sua respectiva descrição: Coluna I 1.Seiri. 2.Seiton. 3.Seiso. 4.Seiketsu. 5.Shitsuke. Coluna II (__)Estabelecer normas e rotinas para manter a organização e garantir a continuidade das boas práticas. (__)Manter o ambiente de trabalho limpo e livre de sujeira, garantindo a conservação dos equipamentos. (__)Eliminar o que não é necessário, mantendo apenas o essencial no ambiente de trabalho. (__)Organizar os itens de trabalho de maneira eficiente, garantindo que cada coisa tenha seu lugar. (__)Cultivar a disciplina e o comprometimento dos colaboradores para que sigam as normas determinadas. Assinale a alternativa que apresenta a correta associação entre as colunas:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "1, 3, 4, 5 e 2."
+          },
+          {
+            "letra": "B",
+            "texto": "4, 3, 1, 2 e 5."
+          },
+          {
+            "letra": "C",
+            "texto": "5, 1, 2, 3 e 4."
+          },
+          {
+            "letra": "D",
+            "texto": "3, 4, 5, 2 e 1."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q025",
+        "id_questao": "Q025",
+        "numero_sequencial": 25,
+        "numero_prova": 25,
+        "texto_contexto": null,
+        "enunciado": "Na Gestão Pública um dos princípios exige que todas as ações e decisões públicas sejam fundamentadas pela transparência, permitindo que os cidadãos acompanhem e fiscalizem os atos administrativos. Esse princípio é fundamental para garantir a confiança da população nos gestores públicos. Marque a alternativa que corresponda a esse princípio:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Impessoalidade."
+          },
+          {
+            "letra": "B",
+            "texto": "Moralidade."
+          },
+          {
+            "letra": "C",
+            "texto": "Publicidade."
+          },
+          {
+            "letra": "D",
+            "texto": "Eficiência. AGENTE ADMINISTRATIVO - 1 5 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:U2F0LCAwOCBOb3YgMjAyNSAxMjo0MjozMCAtMDMwMA=="
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q026",
+        "id_questao": "Q026",
+        "numero_sequencial": 26,
+        "numero_prova": 26,
+        "texto_contexto": null,
+        "enunciado": "O Fluxo de Caixa é uma ferramenta essencial para a gestão financeira de uma empresa, pois fornece uma visão detalhada das entradas e saídas de recursos em um período específico. Assinale a alternativa que descreve corretamente um dos principais objetivos da Demonstração de Fluxo de Caixa.",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Identificar a liquidez da empresa, demonstrando a capacidade de gerar caixa suficiente para cobrir suas obrigações de curto e longo prazo."
+          },
+          {
+            "letra": "B",
+            "texto": "Avaliar a rentabilidade da empresa ao longo do período, considerando apenas as receitas e despesas operacionais."
+          },
+          {
+            "letra": "C",
+            "texto": "Demonstrar os ativos e passivos da empresa, com foco apenas nos investimentos de longo prazo."
+          },
+          {
+            "letra": "D",
+            "texto": "Registrar os lucros obtidos pela empresa durante o período, sem considerar as movimentações financeiras."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q027",
+        "id_questao": "Q027",
+        "numero_sequencial": 27,
+        "numero_prova": 27,
+        "texto_contexto": null,
+        "enunciado": "De acordo com a Lei nº 12.527/2011 (Lei de Acesso à Informação), que regulamenta o acesso a informações públicas, assinale a alternativa correta sobre as medidas que devem ser cumpridas para garantir o direito à informação:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O atendimento ao público deve ser realizado exclusivamente por meio eletrônico, sem a necessidade de locais financeiros adequados para o atendimento."
+          },
+          {
+            "letra": "B",
+            "texto": "O acesso às informações públicas será restrito a audiências privadas e à consulta apenas por representantes legais dos cidadãos."
+          },
+          {
+            "letra": "C",
+            "texto": "A divulgação de informações será restrita à comunicação interna nos órgãos públicos, sem necessidade de envolvimento da sociedade."
+          },
+          {
+            "letra": "D",
+            "texto": "A criação de um serviço de informações ao cidadão é obrigatória, devendo fornecer orientação sobre o acesso a informações e permitir o protocolo de documentos."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q028",
+        "id_questao": "Q028",
+        "numero_sequencial": 28,
+        "numero_prova": 28,
+        "texto_contexto": null,
+        "enunciado": "João, um cidadão brasileiro, expressou publicamente sua opinião sobre um tema político nas redes sociais, sem utilizar qualquer tipo de anonimato. Ele também criticou duramente uma decisão do governo em um artigo que foi publicado em um jornal local. Após sua manifestação, ele recebeu ameaças de represálias e, em um determinado momento, foi questionado por um agente público sobre o conteúdo de sua postagem. Contudo, ele respondeu que tinha direito de manifestar seu pensamento livremente, sem sofrer censura ou sanção por isso. Assinale a alternativa que indica qual princípio da Constituição Federal de 1988, corresponde à atitude de João:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "A inviolabilidade da liberdade de consciência e de crença, sendo assegurado o livre exercício dos cultos religiosos."
+          },
+          {
+            "letra": "B",
+            "texto": "A liberdade de manifestação do pensamento, sendo vedado o anonimato."
+          },
+          {
+            "letra": "C",
+            "texto": "O direito de resposta proporcional ao agravo, além da indenização por dano material, moral ou à imagem."
+          },
+          {
+            "letra": "D",
+            "texto": "A inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q029",
+        "id_questao": "Q029",
+        "numero_sequencial": 29,
+        "numero_prova": 29,
+        "texto_contexto": null,
+        "enunciado": "O atendimento acontece quando um indivíduo entra em contato com um atendente para solicitar informações, serviços, produtos ou outros tipos de suporte. No que se refere a postura do atendente, registre V, para verdadeiro, e F, para falso: (__)O atendente deve identificar o público como objetivo fundamental do seu trabalho. (__)O atendente deve demonstrar que compreende o que o indivíduo diz. (__)O atendente deve apresentar solução assertivas aos problemas dos indivíduos. Assinale a alternativa com a sequência correta:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "V, V, V."
+          },
+          {
+            "letra": "B",
+            "texto": "F, F, V."
+          },
+          {
+            "letra": "C",
+            "texto": "V, F, F."
+          },
+          {
+            "letra": "D",
+            "texto": "F, V, F. AGENTE ADMINISTRATIVO - 1 6 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:U2F0LCAwOCBOb3YgMjAyNSAxMjo0MjozMCAtMDMwMA=="
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q030",
+        "id_questao": "Q030",
+        "numero_sequencial": 30,
+        "numero_prova": 30,
+        "texto_contexto": null,
+        "enunciado": "Um dos passos mais importantes para atingir nossos objetivos e chegar ao sucesso, em qualquer área da nossa vida, é ter planejamento e organização. No que se refere ao planejamento e organização das tarefas do ambiente de trabalho, é INCORRETO afirmar que:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O planejamento consiste na organização das ações e prioridades que vão definir quais são e como chegar às metas e objetivos das atividades e processos."
+          },
+          {
+            "letra": "B",
+            "texto": "A organização no trabalho permite a criação de processos, aumentando custos e trazendo os resultados esperados."
+          },
+          {
+            "letra": "C",
+            "texto": "O planejamento do trabalho é uma maneira de organizar as tarefas e os recursos disponíveis para alcançar os objetivos."
+          },
+          {
+            "letra": "D",
+            "texto": "O planejamento organiza e estrutura os processos a serem seguidos para um bom andamento do negócio."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q031",
+        "id_questao": "Q031",
+        "numero_sequencial": 31,
+        "numero_prova": 31,
+        "texto_contexto": null,
+        "enunciado": "No que se refere a saúde e segurança no trabalho, analise os excertos e a relação proposta entre eles: I.O uso de Equipamentos de Proteção Individual (EPIs) no ambiente de trabalho é importante. PORQUE II.Reduz a exposição dos trabalhadores a riscos específicos. Sobre as proposições, assinale a alternativa correta:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "O excerto I é verdadeiro e o II é falso."
+          },
+          {
+            "letra": "B",
+            "texto": "Os excertos I e II são verdadeiros e o II é uma justificativa correta do I."
+          },
+          {
+            "letra": "C",
+            "texto": "Os excertos I e II são verdadeiros, mas o II não é uma justificativa correta do I."
+          },
+          {
+            "letra": "D",
+            "texto": "O excerto I é falso e o II é verdadeiro."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "B"
+      },
+      {
+        "id": "Q032",
+        "id_questao": "Q032",
+        "numero_sequencial": 32,
+        "numero_prova": 32,
+        "texto_contexto": null,
+        "enunciado": "Assim como empresas possuem valores e normas, os indivíduos que as compõem também devem agir de forma ética, compreendendo e respeitando esses valores e normas. Nesse contexto, analise as afirmativas abaixo: I.A ética profissional está ligada à postura que se espera de um profissional, no exercício de uma determinada tarefa ou profissão. II.A ética profissional consiste na conduta que o indivíduo deve observar em sua atividade, no sentido de valorizar a profissão ou atividade laboral e bem servir aos que dela dependem. III.Esse aspecto da vida profissional é tão importante que as profissões regulamentadas criam um código de ética profissional, ou seja, um conjunto de normas que deverá ser observado pelas pessoas que exercerem a profissão. Fonte: www.nre.seed.pr.gov.br É CORRETO o que se afirma em:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "I, II e III."
+          },
+          {
+            "letra": "B",
+            "texto": "I e III, apenas."
+          },
+          {
+            "letra": "C",
+            "texto": "I e II, apenas."
+          },
+          {
+            "letra": "D",
+            "texto": "II e III, apenas."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": true,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q033",
+        "id_questao": "Q033",
+        "numero_sequencial": 33,
+        "numero_prova": 33,
+        "texto_contexto": null,
+        "enunciado": "A rotina no ambiente de trabalho consiste na construção de hábitos e a organização das tarefas diárias. O gerenciamento da rotina de trabalho tem por objetivo:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Negligenciar o monitoramento e acompanhamento das tarefas, deixando de avaliar o progresso ou identificar possíveis ajustes necessários."
+          },
+          {
+            "letra": "B",
+            "texto": "Ignorar a definição de prioridades nas atividades, tratando todas as tarefas com o mesmo nível de importância."
+          },
+          {
+            "letra": "C",
+            "texto": "Focar exclusivamente na quantidade de tarefas realizadas, sem considerar a qualidade ou os resultados obtidos."
+          },
+          {
+            "letra": "D",
+            "texto": "Nortear as ações cotidianas realizadas na organização, para que os colaboradores entendam suas?responsabilidades, além de?identificar e corrigir problemas?nos processos. AGENTE ADMINISTRATIVO - 1 7 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:U2F0LCAwOCBOb3YgMjAyNSAxMjo0MjozMCAtMDMwMA=="
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q034",
+        "id_questao": "Q034",
+        "numero_sequencial": 34,
+        "numero_prova": 34,
+        "texto_contexto": null,
+        "enunciado": "Os cronogramas de trabalho são ferramentas extremamente eficazes para a gestão e o acompanhamento das equipes e dos processos. Nesse contexto, registre V, para verdadeiro, e F, para falso: (__)Os cronogramas ajudam a equipe visualizar, acompanhar e relatar seu progresso, bem como etapas que já foram realizadas e o que ainda é necessário fazer para concluir sua meta. (__)Os cronogramas permitem que os membros da equipe assumam suas responsabilidades. (__)Os cronogramas permitem as equipes a permanecerem alinhadas durante todas as etapas do processo. Assinale a alternativa com a sequência correta:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "F, F, V."
+          },
+          {
+            "letra": "B",
+            "texto": "V, F, F."
+          },
+          {
+            "letra": "C",
+            "texto": "V, V, V."
+          },
+          {
+            "letra": "D",
+            "texto": "F, V, V."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q035",
+        "id_questao": "Q035",
+        "numero_sequencial": 35,
+        "numero_prova": 35,
+        "texto_contexto": null,
+        "enunciado": "Ao longo da formação profissional, especialmente durante a vivência prática no mercado de trabalho, é possível perceber que as empresas valorizam fortemente a ética como um atributo essencial. Com relação a conduta ética profissional, registre V, para verdadeiro, e F, para falso: (__)O profissional ético é uma pessoa com uma formação técnica consolidada, mas, sobretudo, com uma formação moral adequada para exercer uma atividade laboral numa empresa, seja ela grande ou pequena, ou de forma autônoma. (__)A conduta ética dos profissionais de uma empresa poderá levá-los, por exemplo, a dizer não para um cliente, sempre que for necessário dizer não. (__)A conduta ética não inibe a iniciativa e a criatividade dos funcionários. Ao contrário, um profissional ético tem condições de deliberar o que é bom para a organização em que trabalha e propor as inovações que considera importantes. Fonte: www.nre.seed.pr.gov.br Assinale a alternativa com a sequência correta:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "V, V, V."
+          },
+          {
+            "letra": "B",
+            "texto": "F, F, V."
+          },
+          {
+            "letra": "C",
+            "texto": "F, V, V."
+          },
+          {
+            "letra": "D",
+            "texto": "V, F, F."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q036",
+        "id_questao": "Q036",
+        "numero_sequencial": 36,
+        "numero_prova": 36,
+        "texto_contexto": null,
+        "enunciado": "O planejamento no ambiente de trabalho é uma ferramenta essencial para organizar atividades, definir prioridades e garantir o alcance de objetivos de forma eficiente. Dentre as vantagens do planejamento no ambiente de trabalho, encontra-se, EXCETO:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Contribui com a eficiência."
+          },
+          {
+            "letra": "B",
+            "texto": "Simplifica as metas."
+          },
+          {
+            "letra": "C",
+            "texto": "Permite fazer avaliações do progresso e detectar falhas."
+          },
+          {
+            "letra": "D",
+            "texto": "Demanda gasto extra."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q037",
+        "id_questao": "Q037",
+        "numero_sequencial": 37,
+        "numero_prova": 37,
+        "texto_contexto": null,
+        "enunciado": "O gerenciamento da rotina é uma ferramenta indispensável para organizar tarefas e otimizar o tempo no dia a dia. Dentre os benefícios dessa prática, encontra-se, EXCETO:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Redução da produtividade e da qualidade do trabalho."
+          },
+          {
+            "letra": "B",
+            "texto": "Padronização dos processos."
+          },
+          {
+            "letra": "C",
+            "texto": "Otimização dos custos."
+          },
+          {
+            "letra": "D",
+            "texto": "Monitoramento dos resultados e comparação com metas."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "A"
+      },
+      {
+        "id": "Q038",
+        "id_questao": "Q038",
+        "numero_sequencial": 38,
+        "numero_prova": 38,
+        "texto_contexto": null,
+        "enunciado": "O atendimento com qualidade necessita do desenvolvimento de atitudes e habilidades, as quais facilitam a interação entre o cidadão e o atendente. São essas habilidades: I.Demonstrar boa vontade. II.Dar atenção às reclamações. III.Manter uma comunicação adequada. É CORRETO o que se afirma em:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "I e III, apenas."
+          },
+          {
+            "letra": "B",
+            "texto": "I e II, apenas."
+          },
+          {
+            "letra": "C",
+            "texto": "I, II e III."
+          },
+          {
+            "letra": "D",
+            "texto": "II e III, apenas."
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "C"
+      },
+      {
+        "id": "Q039",
+        "id_questao": "Q039",
+        "numero_sequencial": 39,
+        "numero_prova": 39,
+        "texto_contexto": null,
+        "enunciado": "A utilização de cronograma nos ambientes de trabalho proporciona: I.A estruturação das tarefas essenciais. II.O acompanhamento dos progressos. III.A previsão das necessidades do projeto. É CORRETO o que se afirma em:",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "II e III, apenas."
+          },
+          {
+            "letra": "B",
+            "texto": "I e II, apenas."
+          },
+          {
+            "letra": "C",
+            "texto": "I e III, apenas."
+          },
+          {
+            "letra": "D",
+            "texto": "I, II e III. AGENTE ADMINISTRATIVO - 1 8 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:U2F0LCAwOCBOb3YgMjAyNSAxMjo0MjozMCAtMDMwMA=="
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "D"
+      },
+      {
+        "id": "Q040",
+        "id_questao": "Q040",
+        "numero_sequencial": 40,
+        "numero_prova": 40,
+        "texto_contexto": null,
+        "enunciado": "No contexto da saúde e segurança no trabalho, assinale a alternativa que se refere a doença do trabalho.",
+        "alternativas": [
+          {
+            "letra": "A",
+            "texto": "Consiste em uma condição adquirida no momento de lazer."
+          },
+          {
+            "letra": "B",
+            "texto": "Consiste em uma condição adquirida por contato direto entre colegas de trabalho."
+          },
+          {
+            "letra": "C",
+            "texto": "Consiste em uma condição adquirida ou agravada devido às condições do ambiente de trabalho."
+          },
+          {
+            "letra": "D",
+            "texto": "Consiste em qualquer doença que o trabalhador já possuía antes de ser contratado. AGENTE ADMINISTRATIVO - 1 9 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:U2F0LCAwOCBOb3YgMjAyNSAxMjo0MjozMCAtMDMwMA== AGENTE ADMINISTRATIVO - 1"
+          }
+        ],
+        "area_conhecimento": "Conhecimentos Específicos",
+        "tem_imagem": false,
+        "gabarito": "C"
+      }
+    ],
+    "imagens": [],
+    "metadados": {
+      "versao_processador": "2.0",
+      "total_textos_base": 1,
+      "questoes_com_referencia_imagem": 8,
+      "imagens_adicionadas_manual": 0
+    }
+  }
+}
