@@ -24,7 +24,7 @@
       {
         "id": "texto_base_2",
         "titulo": "O texto seguinte servirá de base para responder às questões de 5 a 9.",
-        "conteudo": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "conteudo": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) ",
         "questoes_relacionadas": [
           5,
           6,
@@ -158,7 +158,7 @@
         "id_questao": "Q005",
         "numero_sequencial": 5,
         "numero_prova": 5,
-        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) ",
         "enunciado": "De acordo com o texto \"GRIPE AVIÁRIA\", qual das opções descreve corretamente como será conduzida a aplicação da vacina nos voluntários?",
         "alternativas": [
           {
@@ -187,7 +187,7 @@
         "id_questao": "Q006",
         "numero_sequencial": 6,
         "numero_prova": 6,
-        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) ",
         "enunciado": "Observe as palavras acentuadas no trecho abaixo, extraído do texto \"GRIPE AVIÁRIA\": \"O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos [...] Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas [...]\" Com base nas regras de acentuação gráfica da Língua Portuguesa, assinale a alternativa CORRETA:",
         "alternativas": [
           {
@@ -216,7 +216,7 @@
         "id_questao": "Q007",
         "numero_sequencial": 7,
         "numero_prova": 7,
-        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) ",
         "enunciado": "Qual é o principal objetivo dos testes clínicos mencionados no texto \"GRIPE AVIÁRIA\"?",
         "alternativas": [
           {
@@ -245,7 +245,7 @@
         "id_questao": "Q008",
         "numero_sequencial": 8,
         "numero_prova": 8,
-        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) ",
         "enunciado": "Por que a vacina é chamada de \"monovalente\", segundo o texto \"GRIPE AVIÁRIA\"?",
         "alternativas": [
           {
@@ -274,7 +274,7 @@
         "id_questao": "Q009",
         "numero_sequencial": 9,
         "numero_prova": 9,
-        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) AGENTE ADMINISTRATIVO - 1 1 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "texto_contexto": "GRIPE AVIÁRIA O Instituto Butantan desenvolveu a primeira vacina brasileira contra a gripe aviária em seres humanos e está aguardando a autorização da Anvisa para começar os testes em voluntários. Esses testes, chamados de ensaios clínicos, serão realizados pelo Plátano Centro de Pesquisas Clínicas e vão envolver 700 pessoas nos estados de Pernambuco, Minas Gerais e São Paulo, com idades a partir de 18 anos. O objetivo é verificar se a vacina é segura e se realmente estimula a proteção do organismo contra o vírus. Os voluntários receberão duas doses — da vacina ou de um placebo (substância sem efeito) — com 21 dias de intervalo entre elas. Depois disso, serão acompanhados por sete meses, com exames e visitas médicas regulares. Antes de participar, todos passarão por uma triagem com exames no Real Hospital Português. Já a análise da resposta do sistema imunológico à vacina será feita na Fiocruz, em Pernambuco. Essa vacina é chamada de \"monovalente\" porque é direcionada especificamente à cepa H5N8 do vírus da gripe aviária. A ideia é que ela ajude o Brasil a se preparar para possíveis surtos no futuro e contribua para a prevenção de novas pandemias. Fonte: https://agenciagov.ebc.com.br/ (texto adaptado) ",
         "enunciado": "Após a leitura do texto \"GRIPE AVIÁRIA\", assinale a alternativa em que a concordância verbal ou nominal está de acordo com a norma-padrão da língua portuguesa:",
         "alternativas": [
           {
@@ -362,7 +362,7 @@
         "numero_sequencial": 12,
         "numero_prova": 12,
         "texto_contexto": null,
-        "enunciado": "AGENTE ADMINISTRATIVO - 1 2 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA== Examine a planilha apresentada acima. Qual das alternativas abaixo apresenta uma fórmula que, ao ser inserida na célula B1, retorna o valor \"FALSO\", conforme exibido na planilha acima?",
+        "enunciado": " Examine a planilha apresentada acima. Qual das alternativas abaixo apresenta uma fórmula que, ao ser inserida na célula B1, retorna o valor \"FALSO\", conforme exibido na planilha acima?",
         "alternativas": [
           {
             "letra": "A",
@@ -523,7 +523,7 @@
           },
           {
             "letra": "D",
-            "texto": "Inserir planilhas, imagens e tabelas no documento. AGENTE ADMINISTRATIVO - 1 3 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA=="
+            "texto": "Inserir planilhas, imagens e tabelas no documento. "
           }
         ],
         "area_conhecimento": "Conhecimentos Gerais",
@@ -689,7 +689,7 @@
           },
           {
             "letra": "B",
-            "texto": "Em um cronograma, o caminho crítico representa a sequência de atividades que define a menor duração possível do projeto, sendo composta pelas tarefas que não admitem atrasos sem impactar a data final. AGENTE ADMINISTRATIVO - 1 4 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA=="
+            "texto": "Em um cronograma, o caminho crítico representa a sequência de atividades que define a menor duração possível do projeto, sendo composta pelas tarefas que não admitem atrasos sem impactar a data final. "
           },
           {
             "letra": "C",
@@ -842,7 +842,7 @@
           },
           {
             "letra": "D",
-            "texto": "O Balanço Patrimonial da Administração Pública é formado pelas contas de natureza orçamentária, como receitas e despesas, registradas com base no regime de caixa. AGENTE ADMINISTRATIVO - 1 5 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA=="
+            "texto": "O Balanço Patrimonial da Administração Pública é formado pelas contas de natureza orçamentária, como receitas e despesas, registradas com base no regime de caixa. "
           }
         ],
         "area_conhecimento": "Conhecimentos Específicos",
@@ -1008,7 +1008,7 @@
           },
           {
             "letra": "B",
-            "texto": "É livre o exercício de qualquer trabalho, ofício ou profissão, desde que atendidas as qualificações profissionais que a lei estabelecer. AGENTE ADMINISTRATIVO - 1 6 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA=="
+            "texto": "É livre o exercício de qualquer trabalho, ofício ou profissão, desde que atendidas as qualificações profissionais que a lei estabelecer. "
           },
           {
             "letra": "C",
@@ -1174,7 +1174,7 @@
         "numero_sequencial": 40,
         "numero_prova": 40,
         "texto_contexto": null,
-        "enunciado": "Com base apenas nos incisos III e IV do artigo 4º da Lei nº 12.527/2011 (Lei de Acesso à Informação), e sem considerar doutrina ou jurisprudência, qual das alternativas define corretamente \"INFORMAÇÃO SIGILOSA\" e \"INFORMAÇÃO PESSOAL\"? AGENTE ADMINISTRATIVO - 1 7 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA==",
+        "enunciado": "Com base apenas nos incisos III e IV do artigo 4º da Lei nº 12.527/2011 (Lei de Acesso à Informação), e sem considerar doutrina ou jurisprudência, qual das alternativas define corretamente \"INFORMAÇÃO SIGILOSA\" e \"INFORMAÇÃO PESSOAL\"? ",
         "alternativas": [
           {
             "letra": "A",
@@ -1190,7 +1190,7 @@
           },
           {
             "letra": "D",
-            "texto": "Informação sigilosa e informação pessoal são sinônimos e ambas devem ser protegidas por igual, sem distinção de finalidade. AGENTE ADMINISTRATIVO - 1 8 pcimarkpci MDAwMDowMDAwOjAwMDA6MDAwMDowMDAwOmZmZmY6YTdmYTo4ZTc0:VGh1LCAwNiBOb3YgMjAyNSAyMDoyNDozNCAtMDMwMA== RASCUNHO NÃO DESTAQUE AGENTE ADMINISTRATIVO - 1"
+            "texto": "Informação sigilosa e informação pessoal são sinônimos e ambas devem ser protegidas por igual, sem distinção de finalidade.  RASCUNHO NÃO DESTAQUE AGENTE ADMINISTRATIVO - 1"
           }
         ],
         "area_conhecimento": "Conhecimentos Específicos",
