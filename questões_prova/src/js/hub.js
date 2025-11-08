@@ -14,26 +14,52 @@ class HubProvas {
 
     async carregarProvas() {
         try {
-            // Em vez de listar a pasta, carrega o índice
-            const response = await fetch('./data/provas/index.json');
-            const index = await response.json();
+            console.log('[Hub] fetch index.json -> ./data/provas/index.json');
+            const resIndex = await fetch('./data/provas/index.json', { cache: 'no-store' });
+            if (!resIndex.ok) {
+                throw new Error('index.json não encontrado. status: ' + resIndex.status);
+            }
+            const index = await resIndex.json();
+            console.log('[Hub] index:', index);
+            if (!index || !Array.isArray(index.provas)) {
+                throw new Error('index.json inválido: falta campo "provas" como array');
+            }
+    
             const files = index.provas;
-            
-            // Resto do código igual...
-            const promises = files.map(async file => {
-                const response = await fetch(`./data/provas/${file}`);
-                const prova = await response.json();
-                return prova.prova;
-            });
-
-            this.provas = await Promise.all(promises);
+            const loaded = [];
+    
+            for (const file of files) {
+                try {
+                    console.log('[Hub] carregando', file);
+                    const r = await fetch(`./data/provas/${file}`, { cache: 'no-store' });
+                    console.log('[Hub] status', r.status);
+                    if (!r.ok) {
+                        console.warn('[Hub] não encontrado ou erro ao buscar', file, 'status', r.status);
+                        continue;
+                    }
+                    const pj = await r.json().catch(e => { console.warn('[Hub] JSON inválido em', file, e); return null; });
+                    if (!pj || !pj.prova) {
+                        console.warn('[Hub] arquivo carregado não contém "prova":', file, pj);
+                        continue;
+                    }
+                    // verificação de campos mínimos
+                    if (!pj.prova.id) pj.prova.id = (pj.prova.nome_prova || file).slice(0,16);
+                    loaded.push(pj.prova);
+                } catch (err) {
+                    console.error('[Hub] erro ao processar', file, err);
+                    continue;
+                }
+            }
+    
+            this.provas = loaded;
             this.filtradas = [...this.provas];
-            
+            console.log('[Hub] provas finais carregadas:', this.provas.length, this.provas.map(p=>p.id));
         } catch (error) {
-            console.error('Erro ao carregar lista de provas:', error);
-            document.getElementById('loading').textContent = 'Erro ao carregar provas. Use um servidor local.';
+            console.error('[Hub] erro geral ao carregar provas:', error);
+            document.getElementById('loading').textContent = 'Erro ao carregar provas. Veja console.';
         }
     }
+
 
     renderizarProvas() {
         const container = document.getElementById('provasContainer');
@@ -133,3 +159,4 @@ class HubProvas {
 
 
 const hub = new HubProvas();
+
