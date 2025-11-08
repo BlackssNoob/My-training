@@ -80,7 +80,7 @@
             const loading = document.getElementById('loadingRecent');
             
             // Assume que o index.json está em ../data/provas/index.json
-            fetch('../data/provas/index.json')
+            fetch('./data/provas/index.json')
                 .then(response => {
                     if (!response.ok) throw new Error("Index de provas não encontrado.");
                     return response.json();
@@ -89,7 +89,7 @@
                     loading.style.display = 'none';
 
                     // 1. Seleciona as primeiras 4 provas (assumindo que já estão ordenadas por data/ID)
-                    const recentProvas = data.slice(0, 4); 
+                    const recentProvas = data.provas.slice(0, 4);
 
                     if (recentProvas.length === 0) {
                         container.innerHTML = '<p class="no-recent-results">Nenhuma prova recente encontrada.</p>';
@@ -126,3 +126,4 @@
 </body>
 
 </html>
+
