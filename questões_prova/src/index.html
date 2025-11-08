@@ -30,24 +30,35 @@
 
     <script src="js/hub.js"></script>
     <script>
-        function carregarProvaAleatoria() {
-            fetch('../data/provas/')
-                .then(response => response.text())
-                .then(data => {
-                    const files = data.match(/prova_[a-f0-9]+\.json/g) || [];
-                    if (files.length > 0) {
-                        const randomFile = files[Math.floor(Math.random() * files.length)];
-                        const provaId = randomFile.replace('prova_', '').replace('.json', '');
-                        window.location.href = `prova.html?id=${provaId}`;
-                    } else {
-                        alert('Nenhuma prova encontrada!');
-                    }
-                })
-                .catch(error => {
-                    console.error('Erro:', error);
-                    alert('Erro ao carregar provas');
-                });
+        async function carregarProvaAleatoria() {
+            try {
+                console.log('🎲 Carregando prova aleatória...');
+                
+                const response = await fetch('./data/provas/index.json');
+                
+                if (!response.ok) {
+                    throw new Error(`Erro ao carregar index.json: ${response.status}`);
+                }
+                
+                const index = await response.json();
+                const files = index.provas;
+                
+                console.log('📁 Arquivos disponíveis:', files);
+                
+                if (files.length > 0) {
+                    const randomFile = files[Math.floor(Math.random() * files.length)];
+                    const provaId = randomFile.replace('prova_', '').replace('.json', '');
+                    console.log('🎯 Prova selecionada:', provaId);
+                    window.location.href = `prova.html?id=${provaId}`;
+                } else {
+                    alert('Nenhuma prova encontrada no index.json!');
+                }
+            } catch (error) {
+                console.error('💥 Erro:', error);
+                alert('Erro ao carregar provas do index.json: ' + error.message);
+            }
         }
     </script>
 </body>
+
 </html>
