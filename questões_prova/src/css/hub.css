@@ -1,57 +1,63 @@
-/* Hub específico */
+/* hub.css - Minimalista e Quadrado (Herda cores do style.css) */
+
 .search-bar {
     margin-bottom: 30px;
 }
 
 .search-bar input {
     width: 100%;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 25px;
+    padding: 18px 25px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
     font-size: 1.1rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: var(--color-shadow-subtle);
+    color: var(--color-primary);
 }
 
 .filters {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    gap: 20px;
     margin-bottom: 30px;
 }
 
 .filters select {
-    padding: 12px 15px;
-    border: none;
-    border-radius: 10px;
+    padding: 15px 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
     font-size: 1rem;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    background: white;
+    box-shadow: var(--color-shadow-subtle);
+    background: var(--color-surface);
+    color: var(--color-primary);
+    appearance: none;
 }
 
 .provas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
 
 .prova-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    background: var(--color-surface);
+    padding: 30px;
+    border-radius: 0;
+    box-shadow: var(--color-shadow-subtle);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
     cursor: pointer;
+    border: 1px solid var(--color-border);
 }
 
 .prova-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: none;
+    box-shadow: var(--color-shadow-elevated);
+    border-color: var(--color-highlight);
 }
 
 .prova-card h3 {
-    color: #4a5568;
+    color: var(--color-primary);
     margin-bottom: 10px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .prova-meta {
@@ -62,25 +68,28 @@
 }
 
 .prova-meta span {
-    background: #e2e8f0;
-    padding: 5px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    color: #4a5568;
+    background: var(--color-border);
+    padding: 7px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    font-weight: 500;
 }
 
 .prova-stats {
     display: flex;
     justify-content: space-between;
-    color: #718096;
-    font-size: 0.9rem;
-    border-top: 1px solid #e2e8f0;
+    color: #6A6A6A;
+    font-size: 0.95rem;
+    border-top: 1px solid var(--color-border);
     padding-top: 15px;
 }
 
 .no-results {
     text-align: center;
     padding: 60px 20px;
-    color: white;
+    color: var(--color-primary);
     font-size: 1.2rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
 }

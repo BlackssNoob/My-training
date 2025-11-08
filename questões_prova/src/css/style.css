@@ -1,48 +1,144 @@
+/* style.css - Versão Minimalista, Quadrada e de Alto Contraste */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    /* Paleta Minimalista (Preto, Branco, Destaque Terroso) */
+    --color-background: #F8F8F8; /* Off-White (Fundo Geral) */
+    --color-surface: #FFFFFF; /* Branco puro (Cartões e Container) */
+    --color-primary: #333333; /* Preto/Cinza Chumbo (Texto, Títulos, Nav Bar) */
+    --color-highlight: #A0522D; /* Sienna (Marrom Terroso Rico para Ação/Destaque) */
+    --color-success: #388E3C; /* Verde Escuro (Correto) */
+    --color-danger: #D32F2F; /* Vermelho (Incorreto) */
+    --color-border: #E0E0E0; /* Cinza Suave para Bordas */
+    --color-shadow-subtle: 0 1px 4px rgba(0, 0, 0, 0.1); 
+    --color-shadow-elevated: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Roboto', 'Arial', sans-serif; /* Fonte limpa */
+    background-color: var(--color-background);
     min-height: 100vh;
-    color: #333;
+    color: var(--color-primary);
+    line-height: 1.6;
+    position: relative;
+    padding-top: 80px; 
+    /* ---------------------------------------------------- */
+    /* ADIÇÃO DO BACKGROUND COM IMAGEM */
+    /* ---------------------------------------------------- */
+    
+    /* 1. Define o caminho da imagem. Ajuste o nome (ex: "background.jpg") */
+    background-image: url('img/backgrund.jpeg');
+    
+    /* 2. Garante que a imagem cubra todo o corpo */
+    background-size: cover;     
+    
+    /* 3. Centraliza a imagem no corpo */
+    background-position: center; 
+    
+    /* 4. Fixa a imagem para que ela não role junto com o conteúdo (efeito paralaxe sutil) */
+    background-attachment: fixed; 
+    
+    /* 5. Adiciona uma cor de fallback caso a imagem não carregue */
+    background-color: var(--color-background); 
+    
+    /* Opcional: Para evitar a repetição caso a imagem seja pequena */
+    background-repeat: no-repeat;
+}
+
+/* Remoção da forma geométrica grande para minimalismo */
+body::before {
+    content: none;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 30px;
+    background-color: var(--color-surface);
+    box-shadow: var(--color-shadow-elevated);
+    border-radius: 0; /* Totalmente quadrado */
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
+
+/* --- NAVEGAÇÃO DE TOPO FIXA (Top Nav) --- */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary); /* Preto */
+    color: white;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo h2 {
+    font-family: 'Playfair Display', serif; /* Fonte elegante */
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 400;
+    padding: 5px 0;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s ease;
+}
+
+.nav-links a:hover {
+    border-bottom: 1px solid var(--color-highlight);
+}
+/* -------------------------------------------------------- */
 
 /* Header */
 header {
     text-align: center;
-    margin-bottom: 40px;
-    color: white;
+    margin-bottom: 50px;
+    color: var(--color-primary);
+    padding: 0;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: var(--color-primary);
+    text-shadow: none;
 }
 
 .back-btn {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 25px;
-    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 12px 30px;
+    background: var(--color-highlight);
+    border-radius: 4px; 
+    transition: background-color 0.3s ease;
 }
 
 .back-btn:hover {
-    background: rgba(255,255,255,0.3);
-    transform: translateY(-2px);
+    background: #8B4513;
 }
 
 /* Main Menu */
@@ -50,37 +146,39 @@ header h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .menu-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 20px;
+    background: var(--color-surface);
+    padding: 40px;
+    border-radius: 0;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: var(--color-shadow-subtle);
+    border: 1px solid var(--color-border);
 }
 
 .menu-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: var(--color-shadow-elevated);
+    border-color: var(--color-highlight);
 }
 
 .menu-icon {
-    font-size: 4rem;
-    margin-bottom: 20px;
+    font-size: 3rem; 
+    margin-bottom: 15px;
+    color: var(--color-highlight); 
 }
 
 .menu-card h2 {
-    color: #4a5568;
-    margin-bottom: 15px;
+    color: var(--color-primary);
+    margin-bottom: 10px;
     font-size: 1.5rem;
 }
 
 .menu-card p {
-    color: #718096;
+    color: #6A6A6A;
     line-height: 1.6;
 }
 
@@ -88,12 +186,14 @@ header h1 {
 .prova-header {
     text-align: center;
     margin-bottom: 30px;
-    color: white;
+    color: var(--color-primary);
 }
 
 .prova-header h1 {
-    font-size: 2rem;
-    margin: 20px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin: 10px 0;
+    color: var(--color-primary);
 }
 
 .prova-info {
@@ -101,8 +201,8 @@ header h1 {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    font-size: 0.9rem;
-    opacity: 0.9;
+    font-size: 0.95rem;
+    color: #6A6A6A;
 }
 
 /* Stats */
@@ -114,18 +214,19 @@ header h1 {
 }
 
 .stat {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
+    background: var(--color-surface);
+    padding: 25px;
+    border-radius: 0;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: none;
+    border: 1px solid var(--color-border);
 }
 
 .stat-number {
     display: block;
     font-size: 2rem;
     font-weight: bold;
-    color: #4a5568;
+    color: var(--color-highlight);
 }
 
 .stat-label {
@@ -137,7 +238,7 @@ header h1 {
 .progress-bar {
     width: 100%;
     height: 10px;
-    background: rgba(255,255,255,0.3);
+    background: var(--color-border);
     border-radius: 5px;
     margin-bottom: 40px;
     overflow: hidden;
@@ -145,7 +246,7 @@ header h1 {
 
 .progress-fill {
     height: 100%;
-    background: #48bb78;
+    background: var(--color-highlight);
     border-radius: 5px;
     transition: width 0.3s ease;
     width: 0%;
@@ -153,44 +254,45 @@ header h1 {
 
 /* Texto Base */
 .texto-base {
-    background: white;
+    background: var(--color-surface);
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 0;
     margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: var(--color-shadow-subtle);
+    border: 1px solid var(--color-border);
 }
 
 .texto-base h3 {
-    color: #4a5568;
+    color: var(--color-primary);
     margin-bottom: 15px;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: 10px;
 }
 
 .texto-base p {
     line-height: 1.8;
-    color: #4a5568;
+    color: var(--color-primary);
 }
 
 /* Questões */
 .questao {
-    background: white;
+    background: var(--color-surface);
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 0;
     margin-bottom: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: var(--color-shadow-subtle);
     transition: all 0.3s ease;
     border: 3px solid transparent;
 }
 
 .questao.correta {
-    border-color: #48bb78;
-    background: #f0fff4;
+    border-color: var(--color-success);
+    background: #F3FFF5;
 }
 
 .questao.incorreta {
-    border-color: #f56565;
-    background: #fff5f5;
+    border-color: var(--color-danger);
+    background: #FFF5F5;
 }
 
 .questao-header {
@@ -202,21 +304,21 @@ header h1 {
 
 .questao-numero {
     font-weight: bold;
-    color: #4a5568;
+    color: var(--color-highlight);
     font-size: 1.1rem;
 }
 
 .questao-area {
-    background: #e2e8f0;
+    background: var(--color-border);
     padding: 5px 15px;
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 0.8rem;
-    color: #4a5568;
+    color: var(--color-primary);
 }
 
 .questao-enunciado {
     line-height: 1.8;
-    color: #4a5568;
+    color: var(--color-primary);
     margin-bottom: 25px;
     font-size: 1.05rem;
 }
@@ -231,36 +333,36 @@ header h1 {
     display: flex;
     align-items: flex-start;
     padding: 15px 20px;
-    background: #f7fafc;
-    border: 2px solid #e2e8f0;
-    border-radius: 10px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .alternativa:hover {
-    background: #edf2f7;
-    border-color: #cbd5e0;
+    background: #F5F5F5;
+    border-color: var(--color-highlight);
 }
 
 .alternativa.selecionada {
-    background: #ebf8ff;
-    border-color: #4299e1;
+    background: #FFFAF5;
+    border-color: var(--color-highlight);
 }
 
 .alternativa.correta {
-    background: #f0fff4;
-    border-color: #48bb78;
+    background: #F3FFF5;
+    border-color: var(--color-success);
 }
 
 .alternativa.incorreta {
-    background: #fff5f5;
-    border-color: #f56565;
+    background: #FFF5F5;
+    border-color: var(--color-danger);
 }
 
 .alternativa-letra {
-    background: #e2e8f0;
-    color: #4a5568;
+    background: var(--color-border);
+    color: var(--color-primary);
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -273,17 +375,17 @@ header h1 {
 }
 
 .alternativa.selecionada .alternativa-letra {
-    background: #4299e1;
+    background: var(--color-highlight);
     color: white;
 }
 
 .alternativa.correta .alternativa-letra {
-    background: #48bb78;
+    background: var(--color-success);
     color: white;
 }
 
 .alternativa.incorreta .alternativa-letra {
-    background: #f56565;
+    background: var(--color-danger);
     color: white;
 }
 
@@ -296,20 +398,20 @@ header h1 {
 .feedback {
     margin-top: 15px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 4px;
     font-size: 0.9rem;
 }
 
 .feedback.correta {
-    background: #f0fff4;
-    color: #22543d;
-    border: 1px solid #9ae6b4;
+    background: #EAF7ED;
+    color: #1E6C40;
+    border: 1px solid #7EC69C;
 }
 
 .feedback.incorreta {
-    background: #fff5f5;
-    color: #742a2a;
-    border: 1px solid #fc8181;
+    background: #FFF0F0;
+    color: #9E3535;
+    border: 1px solid #E4A0A0;
 }
 
 .feedback span {
@@ -320,7 +422,7 @@ header h1 {
 .questao-imagem {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 4px;
     margin: 15px 0;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
@@ -330,13 +432,13 @@ header h1 {
     text-align: center;
     margin-top: 40px;
     padding-top: 30px;
-    border-top: 2px solid #e2e8f0;
+    border-top: 1px solid var(--color-border);
 }
 
 .btn-primary, .btn-secondary {
     padding: 15px 30px;
     border: none;
-    border-radius: 10px;
+    border-radius: 4px;
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
@@ -345,31 +447,31 @@ header h1 {
 }
 
 .btn-primary {
-    background: #667eea;
+    background: var(--color-highlight);
     color: white;
 }
 
 .btn-primary:hover {
-    background: #5a6fd8;
-    transform: translateY(-2px);
+    background: #8B4513;
 }
 
 .btn-secondary {
-    background: #e2e8f0;
-    color: #4a5568;
+    background: var(--color-border);
+    color: var(--color-primary);
 }
 
 .btn-secondary:hover {
-    background: #cbd5e0;
-    transform: translateY(-2px);
+    background: #C0C0C0;
 }
 
 /* Loading */
 .loading {
     text-align: center;
     padding: 60px 20px;
-    color: white;
-    font-size: 1.2rem;
+    color: var(--color-primary);
+    background: var(--color-surface);
+    border-radius: 0;
+    border: 1px solid var(--color-border);
 }
 
 /* Responsive */
@@ -395,10 +497,67 @@ header h1 {
         flex-direction: column;
         gap: 10px;
     }
+
+    .nav-content {
+        flex-direction: column;
+        gap: 10px;
+    }
     
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links a {
+        margin: 0 10px;
+    }
+    
+    body {
+        padding-top: 120px;
+    }
+
     .btn-primary, .btn-secondary {
         display: block;
         width: 100%;
         margin: 10px 0;
     }
 }
+
+
+/* ... (estilos anteriores) ... */
+
+/* --- ESTILOS PARA SEÇÃO DE PROVAS RECENTES NO INDEX --- */
+
+#recent-provas {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--color-border);
+}
+
+#recent-provas h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7rem;
+    margin-bottom: 30px; /* Mais espaço para separar o título */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Usando o grid definido em hub.css: .provas-grid { ... } */
+/* Apenas garantimos que o container de loading ocupe o espaço */
+.loading {
+    grid-column: 1 / -1; 
+}
+
+.ver-todas-link {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Ajustando Menu Icon para usar Font Awesome (Se não foi feito antes) */
+.menu-card .menu-icon i {
+    font-size: 3rem; 
+    color: var(--color-highlight); 
+}   

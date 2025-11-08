@@ -5,27 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Provas</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap">
 </head>
 <body>
+    
+    <nav class="top-nav">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <h2>LeafProvas</h2>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="hub.html">Hub de Provas</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <header>
-            <h1>📚 Sistema de Provas</h1>
-            <p>Selecione uma opção para começar</p>
+            <h1>Provas de Concursos</h1>
+            <p>Selecione uma opção para começar a responder</p>
         </header>
         
         <main class="main-menu">
             <div class="menu-card" onclick="window.location.href='hub.html'">
-                <div class="menu-icon">📋</div>
+                <div class="menu-icon"></div>
                 <h2>Ver Todas as Provas</h2>
                 <p>Navegue por todas as provas disponíveis</p>
             </div>
             
             <div class="menu-card" onclick="carregarProvaAleatoria()">
-                <div class="menu-icon">🎲</div>
+                <div class="menu-icon"></div>
                 <h2>Prova Aleatória</h2>
                 <p>Responda uma prova selecionada aleatoriamente</p>
             </div>
         </main>
+
+    </div>
+
+    <div class="container">
+        <section id="recent-provas">
+            <h2><i class="fa-solid fa-star" style="color: var(--color-highlight);"></i> Recentes</h2>
+            <div id="recentProvasContainer" class="provas-grid">
+                <div id="loadingRecent" class="loading" style="grid-column: 1 / -1;">Carregando últimas provas...</div>
+            </div>
+        </section>
     </div>
 
     <script src="js/hub.js"></script>
@@ -48,6 +72,55 @@
                     alert('Erro ao carregar provas');
                 });
         }
+
+        // NOVO SCRIPT PARA CARREGAR AS 4 PROVAS RECENTES
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('recentProvasContainer');
+            const loading = document.getElementById('loadingRecent');
+            
+            // Assume que o index.json está em ../data/provas/index.json
+            fetch('../data/provas/index.json')
+                .then(response => {
+                    if (!response.ok) throw new Error("Index de provas não encontrado.");
+                    return response.json();
+                })
+                .then(data => {
+                    loading.style.display = 'none';
+
+                    // 1. Seleciona as primeiras 4 provas (assumindo que já estão ordenadas por data/ID)
+                    const recentProvas = data.slice(0, 4); 
+
+                    if (recentProvas.length === 0) {
+                        container.innerHTML = '<p class="no-recent-results">Nenhuma prova recente encontrada.</p>';
+                        return;
+                    }
+
+                    // 2. Cria os cards HTML (utilizando a estrutura de card do hub.css)
+                    recentProvas.forEach(prova => {
+                        const card = document.createElement('div');
+                        // Usamos a classe 'prova-card' definida no hub.css para manter o visual quadrado
+                        card.classList.add('prova-card'); 
+                        card.setAttribute('onclick', `window.location.href='prova.html?id=${prova.id}'`);
+                        
+                        card.innerHTML = `
+                            <h3>${prova.nome}</h3>
+                            <div class="prova-meta">
+                                <span>${prova.organizadora}</span>
+                                <span>${prova.ano}</span>
+                            </div>
+                            <div class="prova-stats">
+                                <span>Cargo: ${prova.cargo}</span>
+                            </div>
+                        `;
+                        container.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar provas recentes:', error);
+                    loading.textContent = 'Não foi possível carregar as provas. Verifique o caminho do index.json.';
+                    loading.classList.add('error');
+                });
+        });
     </script>
 </body>
 </html>
