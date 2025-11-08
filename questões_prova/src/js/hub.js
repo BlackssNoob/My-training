@@ -18,48 +18,38 @@ class HubProvas {
 
     async carregarProvas() {
         try {
-            // LISTA MANUAL das provas disponíveis - ATUALIZE COM SEUS ARQUIVOS
-            const provasDisponiveis = [
-                'prova_b9f68e13.json'
-                // Adicione mais: 'prova_12345678.json', 'prova_abcdef12.json'
-            ];
-
-            const promises = provasDisponiveis.map(async (file) => {
+            // Carrega a lista de provas do index.json
+            const response = await fetch('./data/provas/index.json');
+            const index = await response.json();
+            const files = index.provas;
+            
+            console.log('Arquivos encontrados no index:', files);
+    
+            const promises = files.map(async (file) => {
                 try {
                     const response = await fetch(`./data/provas/${file}`);
                     if (!response.ok) {
                         throw new Error(`Arquivo ${file} não encontrado`);
                     }
-                    const prova = await response.json();
-                    return prova.prova;
+                    const provaData = await response.json();
+                    return provaData.prova;
                 } catch (error) {
                     console.error(`Erro ao carregar ${file}:`, error);
                     return null;
                 }
             });
-
+    
             const resultados = await Promise.all(promises);
             this.provas = resultados.filter(p => p !== null);
             this.filtradas = [...this.provas];
             
+            console.log('Provas carregadas:', this.provas);
+            
         } catch (error) {
             console.error('Erro ao carregar provas:', error);
-            this.mostrarErro('Erro ao carregar provas. Verifique o console.');
+            this.mostrarErro('Erro ao carregar provas do index.json');
         }
     }
-
-    agruparPorCargo() {
-        this.cargos.clear();
-        
-        this.provas.forEach(prova => {
-            const cargo = prova.cargo || 'Outros';
-            if (!this.cargos.has(cargo)) {
-                this.cargos.set(cargo, []);
-            }
-            this.cargos.get(cargo).push(prova);
-        });
-    }
-
     renderizarNavegacaoCargos() {
         const nav = document.getElementById('cargoNav');
         const cargosArray = Array.from(this.cargos.entries());
@@ -249,3 +239,4 @@ class HubProvas {
 }
 
 const hub = new HubProvas();
+
