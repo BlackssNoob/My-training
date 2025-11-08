@@ -55,10 +55,10 @@
     <script src="js/hub.js"></script>
     <script>
         function carregarProvaAleatoria() {
-            fetch('../data/provas/')
-                .then(response => response.text())
+            fetch('./data/provas/index.json')
+                .then(response => response.json())
                 .then(data => {
-                    const files = data.match(/prova_[a-f0-9]+\.json/g) || [];
+                    const files = data.provas;
                     if (files.length > 0) {
                         const randomFile = files[Math.floor(Math.random() * files.length)];
                         const provaId = randomFile.replace('prova_', '').replace('.json', '');
@@ -72,6 +72,7 @@
                     alert('Erro ao carregar provas');
                 });
         }
+
 
         // NOVO SCRIPT PARA CARREGAR AS 4 PROVAS RECENTES
         document.addEventListener('DOMContentLoaded', () => {
@@ -123,4 +124,5 @@
         });
     </script>
 </body>
+
 </html>
