@@ -124,9 +124,12 @@ class HubProvas {
         this.renderizarProvas();
     }
 
-    abrirProva(provaId) {
-        window.location.href = `prova.html?id=${provaId}`;
-    }
+    abrirProva(provaIdCompleto) {
+        // Usa os primeiros 8 caracteres do ID, assim como feito na renderização do cartão
+        const provaIdCurto = provaIdCompleto.slice(0, 8); 
+        window.location.href = `prova.html?id=${provaIdCurto}`;
+    }
 }
 
 const hub = new HubProvas();
+
