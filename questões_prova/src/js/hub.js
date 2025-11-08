@@ -18,38 +18,75 @@ class HubProvas {
 
     async carregarProvas() {
         try {
+            console.log('🚀 Iniciando carregamento de provas...');
+            
             // Carrega a lista de provas do index.json
             const response = await fetch('./data/provas/index.json');
+            
+            if (!response.ok) {
+                throw new Error(`Erro HTTP! status: ${response.status}`);
+            }
+            
             const index = await response.json();
             const files = index.provas;
             
-            console.log('Arquivos encontrados no index:', files);
-    
+            console.log('📁 Arquivos encontrados no index:', files);
+
+            if (!files || files.length === 0) {
+                throw new Error('Nenhuma prova encontrada no index.json');
+            }
+
             const promises = files.map(async (file) => {
                 try {
-                    const response = await fetch(`./data/provas/${file}`);
-                    if (!response.ok) {
-                        throw new Error(`Arquivo ${file} não encontrado`);
+                    console.log(`📥 Tentando carregar: ${file}`);
+                    const fileResponse = await fetch(`./data/provas/${file}`);
+                    
+                    if (!fileResponse.ok) {
+                        throw new Error(`Arquivo ${file} não encontrado (${fileResponse.status})`);
                     }
-                    const provaData = await response.json();
+                    
+                    const provaData = await fileResponse.json();
+                    console.log(`✅ ${file} carregado com sucesso`);
                     return provaData.prova;
                 } catch (error) {
-                    console.error(`Erro ao carregar ${file}:`, error);
+                    console.error(`❌ Erro ao carregar ${file}:`, error);
                     return null;
                 }
             });
-    
+
             const resultados = await Promise.all(promises);
             this.provas = resultados.filter(p => p !== null);
             this.filtradas = [...this.provas];
             
-            console.log('Provas carregadas:', this.provas);
+            console.log('🎉 Provas carregadas com sucesso:', this.provas);
             
         } catch (error) {
-            console.error('Erro ao carregar provas:', error);
-            this.mostrarErro('Erro ao carregar provas do index.json');
+            console.error('💥 Erro crítico ao carregar provas:', error);
+            this.mostrarErro(`
+                Erro ao carregar provas: ${error.message}
+                <br><br>
+                Verifique se:
+                <ul>
+                    <li>O arquivo data/provas/index.json existe</li>
+                    <li>Os nomes dos arquivos no index.json estão corretos</li>
+                    <li>Os arquivos JSON estão na pasta data/provas/</li>
+                </ul>
+            `);
         }
     }
+
+    agruparPorCargo() {
+        this.cargos.clear();
+        
+        this.provas.forEach(prova => {
+            const cargo = prova.cargo || 'Outros';
+            if (!this.cargos.has(cargo)) {
+                this.cargos.set(cargo, []);
+            }
+            this.cargos.get(cargo).push(prova);
+        });
+    }
+
     renderizarNavegacaoCargos() {
         const nav = document.getElementById('cargoNav');
         const cargosArray = Array.from(this.cargos.entries());
@@ -112,8 +149,8 @@ class HubProvas {
             return;
         }
 
-        loading.style.display = 'none';
-        noResults.style.display = 'none';
+        if (loading) loading.style.display = 'none';
+        if (noResults) noResults.style.display = 'none';
         container.style.display = 'block';
 
         const provasPorCargo = new Map();
@@ -210,7 +247,7 @@ class HubProvas {
     }
 
     abrirProva(provaId) {
-        console.log('Abrindo prova:', provaId);
+        console.log('🎯 Abrindo prova:', provaId);
         
         // Verifica se a prova existe na lista
         const provaExiste = this.provas.some(prova => prova.id === provaId);
@@ -218,8 +255,9 @@ class HubProvas {
         if (provaExiste) {
             window.location.href = `prova.html?id=${provaId}`;
         } else {
-            alert('Prova não encontrada! Verifique se o arquivo JSON existe.');
-            console.error('Prova não encontrada:', provaId);
+            console.error('❌ Prova não encontrada na lista:', provaId);
+            console.log('📋 Provas disponíveis:', this.provas.map(p => p.id));
+            alert(`Prova ${provaId} não encontrada! Verifique o console.`);
         }
     }
 
@@ -228,15 +266,28 @@ class HubProvas {
         if (loading) {
             loading.innerHTML = `
                 <div style="text-align: center; color: var(--light-beige); padding: 20px;">
-                    <p>${mensagem}</p>
+                    <h3>❌ Erro no Carregamento</h3>
+                    <div style="margin: 20px 0;">${mensagem}</div>
                     <button onclick="location.reload()" class="nav-btn" style="margin-top: 15px;">
                         🔄 Tentar Novamente
+                    </button>
+                    <br>
+                    <button onclick="hub.mostrarDebugInfo()" class="nav-btn" style="margin-top: 10px; background: var(--olive);">
+                        🐛 Informações de Debug
                     </button>
                 </div>
             `;
         }
     }
+
+    mostrarDebugInfo() {
+        console.log('=== 🐛 DEBUG INFO ===');
+        console.log('Provas carregadas:', this.provas);
+        console.log('Index.json URL:', './data/provas/index.json');
+        console.log('====================');
+        
+        alert('Informações de debug foram logadas no console (F12)');
+    }
 }
 
 const hub = new HubProvas();
-
