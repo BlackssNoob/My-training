@@ -15,13 +15,13 @@ class HubProvas {
     async carregarProvas() {
         try {
             // Em vez de listar a pasta, carrega o índice
-            const response = await fetch('../data/provas/index.json');
+            const response = await fetch('./data/provas/index.json');
             const index = await response.json();
             const files = index.provas;
             
             // Resto do código igual...
             const promises = files.map(async file => {
-                const response = await fetch(`../data/provas/${file}`);
+                const response = await fetch(`./data/provas/${file}`);
                 const prova = await response.json();
                 return prova.prova;
             });
@@ -130,5 +130,6 @@ class HubProvas {
          window.location.href = `prova.html?id=${provaIdCurto}`;
     }
 }
+
 
 const hub = new HubProvas();
