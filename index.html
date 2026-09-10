@@ -939,6 +939,7 @@ function defaultState(){
       },
       meals:[],
       customFoods:[],
+      customTrainings:[],
     },
     stats:{ str:10, agi:10, vit:10, int:10, per:10 },
     baseStats:{ str:10, agi:10, vit:10, int:10, per:10 },
@@ -955,6 +956,8 @@ function defaultState(){
   };
 }
 let S = defaultState();
+let plateCart = [];        // [{foodId, qty}]
+let editingTrainingId = null;
 
 function save(){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(S)); }catch(e){ console.warn('save err', e); } }
 function load(){
@@ -979,6 +982,7 @@ function load(){
     else S.player.healthProfile = Object.assign(defaultState().player.healthProfile, S.player.healthProfile);
     if(!Array.isArray(S.player.meals)) S.player.meals = [];
     if(!Array.isArray(S.player.customFoods)) S.player.customFoods = [];
+    if(!Array.isArray(S.player.customTrainings)) S.player.customTrainings = [];
 
     // Migração v4 -> v5: exercícios já concluídos não podem receber XP novamente.
     if(S.today && Array.isArray(S.today.exercises)){
@@ -2197,21 +2201,56 @@ function viewHealth(){
           '<div class="goal-box"><div class="bar-row"><span>Calorias consumidas</span><b>'+fmt(m.kcal)+' / '+n.calories+' kcal</b></div><div class="nutri-bar"><i style="width:'+pctK+'%"></i></div><div class="bar-row" style="margin-top:8px"><span>Proteína</span><b>'+fmt(m.protein,1)+' / '+n.protein+' g</b></div><div class="nutri-bar"><i style="width:'+pctP+'%"></i></div></div>'+
         '</div>';
     }
-  } else if(healthSubtab==='refeicoes'){
-    const today=getToday(), meals=(S.player.meals||[]).filter(m=>m.date===today);
+    } else if(healthSubtab==='refeicoes'){
+    const today=getToday();
+    const meals=(S.player.meals||[]).filter(m=>m.date===today);
     const m=mealTotals();
-    const groups={'Café da manhã':[],Almoço:[],Lanche:[],Jantar:[],Outro:[]};
-    meals.forEach(me=>{ const g=groups[me.meal]||groups.Outro; g.push(me); });
-    sub='<div class="card"><h2>'+icon('plus',14)+' Registrar alimento</h2>'+
-      '<label>Refeição</label><select id="mealType"><option>Café da manhã</option><option>Almoço</option><option>Lanche</option><option>Jantar</option><option>Outro</option></select>'+
-      '<label style="margin-top:8px">Alimento</label><select id="mealFood">'+allFoods().map(f=>'<option value="'+esc(f.id)+'">'+esc(f.name)+' — '+f.kcal+' kcal/100'+f.unit+'</option>').join('')+'</select>'+
-      '<label style="margin-top:8px">Quantidade (g/ml)</label><input id="mealQty" type="number" min="1" step="1" value="100">'+
-      '<div class="inline-btns"><button class="btn" data-action="addmeal">'+icon('plus',14)+' ADICIONAR</button><button class="btn ghost small" data-action="healthtab" data-v="alimentos">VER ALIMENTOS</button></div>'+
-      '<div class="notice">A quantidade deve ser informada na unidade indicada pelo alimento. Para produtos industrializados, prefira os valores do rótulo.</div>'+
+    const MEAL_ALIASES={'Lanche':'Lanche da tarde','Snack':'Lanche da tarde'};
+    const groups={'Café da manhã':[],'Lanche da manhã':[],Almoço:[],'Lanche da tarde':[],Jantar:[],Ceia:[],Outro:[]};
+    meals.forEach(me=>{ const name = MEAL_ALIASES[me.meal] || me.meal; const g=groups[name]||groups.Outro; g.push(me); });
+
+    const cartTotals = plateCart.reduce((a,it)=>{
+      const f=getFood(it.foodId); if(!f) return a;
+      const q=Number(it.qty)||0;
+      a.kcal += f.kcal*q/100; a.protein += f.protein*q/100;
+      a.carbs += f.carbs*q/100; a.fat += f.fat*q/100;
+      return a;
+    },{kcal:0,protein:0,carbs:0,fat:0});
+
+    sub='<div class="card"><h2>'+icon('plus',14)+' Montar refeição</h2>'+
+      '<label>Refeição</label><select id="plateMealType">'+
+        ['Café da manhã','Lanche da manhã','Almoço','Lanche da tarde','Jantar','Ceia','Outro'].map(x=>'<option>'+x+'</option>').join('')+
+      '</select>'+
+      '<label style="margin-top:8px">Alimento</label>'+
+      '<input id="plateFoodFilter" placeholder="Filtrar alimentos..." style="margin-bottom:6px">'+
+      '<select id="plateFood" size="1">'+allFoods().map(f=>'<option value="'+esc(f.id)+'">'+esc(f.name)+' — '+f.kcal+' kcal/100'+f.unit+'</option>').join('')+'</select>'+
+      '<div class="row" style="margin-top:8px">'+
+        '<div><label>Quantidade</label><input id="plateQty" type="number" min="1" step="1" value="100"></div>'+
+        '<div style="align-self:flex-end"><button class="btn" data-action="addtocart">'+icon('plus',14)+' ADICIONAR</button></div>'+
       '</div>'+
-      '<div class="meal-total"><div class="bigrow"><span>Hoje</span><b>'+fmt(m.kcal)+' kcal</b></div><div class="nutri-mini"><span>Proteína <b>'+fmt(m.protein,1)+'g</b></span><span>Carbo <b>'+fmt(m.carbs,1)+'g</b></span><span>Gordura <b>'+fmt(m.fat,1)+'g</b></span><span>Fibra <b>'+fmt(m.fiber,1)+'g</b></span></div></div>'+
-      Object.entries(groups).map(([name,list])=>'<div class="card"><h2>'+icon('clock',14)+' '+name+'</h2>'+
-        (list.length?list.map(me=>{const f=getFood(me.foodId);return '<div class="meal-row"><div class="meal-main"><div class="meal-name">'+esc(f?f.name:'Alimento removido')+'</div><div class="meal-sub">'+me.qty+' '+(f?f.unit:'g')+' · '+fmt(f?f.kcal*me.qty/100:0)+' kcal · P '+fmt(f?f.protein*me.qty/100:0,1)+'g</div></div><button class="buy-btn" data-action="delmeal" data-id="'+me.id+'">REMOVER</button></div>';}).join(''):'<div class="empty">Nenhum alimento registrado.</div>')+'</div>').join('');
+    '</div>'+
+    '<div class="card"><h2>'+icon('cart',14)+' Prato atual ('+plateCart.length+')</h2>'+
+      (plateCart.length
+        ? plateCart.map((it,idx)=>{
+            const f=getFood(it.foodId);
+            const kcal=f?f.kcal*it.qty/100:0;
+            return '<div class="meal-row"><div class="meal-main"><div class="meal-name">'+esc(f?f.name:'—')+'</div><div class="meal-sub">'+it.qty+' '+(f?f.unit:'g')+' · '+fmt(kcal)+' kcal · P '+fmt(f?f.protein*it.qty/100:0,1)+'g</div></div><button class="buy-btn" data-action="removefromcart" data-idx="'+idx+'" style="border-color:var(--red);color:var(--red);background:rgba(255,77,109,.1)">'+icon('x',12)+'</button></div>';
+          }).join('')
+        : '<div class="empty">Prato vazio. Adicione alimentos acima.</div>')+
+      (plateCart.length ? '<div class="meal-total"><div class="bigrow"><span>Total do prato</span><b>'+fmt(cartTotals.kcal)+' kcal</b></div><div class="nutri-mini"><span>P <b>'+fmt(cartTotals.protein,1)+'g</b></span><span>C <b>'+fmt(cartTotals.carbs,1)+'g</b></span><span>G <b>'+fmt(cartTotals.fat,1)+'g</b></span></div></div>' : '')+
+      (plateCart.length ? '<div class="inline-btns"><button class="btn small ghost" data-action="clearcart">LIMPAR</button><button class="btn small" data-action="savecart">'+icon('check',14)+' SALVAR REFEIÇÃO</button></div>' : '')+
+    '</div>'+
+    '<div class="meal-total"><div class="bigrow"><span>Hoje</span><b>'+fmt(m.kcal)+' kcal</b></div><div class="nutri-mini"><span>Proteína <b>'+fmt(m.protein,1)+'g</b></span><span>Carbo <b>'+fmt(m.carbs,1)+'g</b></span><span>Gordura <b>'+fmt(m.fat,1)+'g</b></span><span>Fibra <b>'+fmt(m.fiber,1)+'g</b></span></div></div>'+
+    Object.keys(groups).map(name=>{
+      const list=groups[name];
+      if(!list.length) return '';
+      return '<div class="card"><h2>'+icon('clock',14)+' '+name+'</h2>'+
+        list.map(me=>{
+          const f=getFood(me.foodId);
+          return '<div class="meal-row"><div class="meal-main"><div class="meal-name">'+esc(f?f.name:'Alimento removido')+'</div><div class="meal-sub">'+me.qty+' '+(f?f.unit:'g')+' · '+fmt(f?f.kcal*me.qty/100:0)+' kcal · P '+fmt(f?f.protein*me.qty/100:0,1)+'g</div></div><button class="buy-btn" data-action="delmeal" data-id="'+me.id+'">REMOVER</button></div>';
+        }).join('')+
+      '</div>';
+    }).join('');
   } else if(healthSubtab==='alimentos'){
     sub='<div class="card"><h2>'+icon('book',14)+' Biblioteca de alimentos</h2><input id="foodSearch" class="food-search" placeholder="Buscar alimento...">'+
       '<div id="foodList">'+renderFoodList('')+'</div>'+
@@ -2220,11 +2259,32 @@ function viewHealth(){
       '</div>';
   } else {
     const plan=trainingPlan();
+    const customTrainings = S.player.customTrainings || [];
     sub='<div class="card"><h2>'+icon('run',14)+' Treino personalizado</h2>'+
-      '<p class="hint">Plano inicial gerado a partir do seu nível de atividade, objetivo, frequência e local de treino.</p>'+
+      '<p class="hint">Plano inicial gerado pelo sistema. Você também pode criar seus próprios treinos abaixo.</p>'+
       (healthProfileReady()?plan.map(d=>'<div class="training-day"><h3>'+icon('target',13)+' '+d.name+'</h3>'+d.ex.map(x=>'<div class="training-ex"><span>'+esc(x[0])+'</span><span>'+esc(x[1])+'</span></div>').join('')+'</div>').join(''):'<div class="empty">Configure seu perfil primeiro.</div>')+
-      '<div class="notice">Este é um plano genérico de referência. Progressão, cargas, técnica e restrições individuais devem ser avaliadas por profissional qualificado, especialmente em caso de dor, lesão ou condição de saúde.</div>'+
-      '</div>';
+    '</div>'+
+    '<div class="card"><h2>'+icon('star',14)+' Meus treinos ('+customTrainings.length+')</h2>'+
+      (customTrainings.length
+        ? customTrainings.map(t=>{
+            const editing = editingTrainingId===t.id;
+            let inner = '<div class="training-day"><h3 style="display:flex;justify-content:space-between;align-items:center;gap:6px"><span>'+icon('target',13)+' '+esc(t.name)+'</span>'+
+              '<span style="display:flex;gap:4px">'+
+                '<button class="buy-btn" data-action="addtrainingexercise" data-id="'+t.id+'" style="padding:5px 8px" title="Adicionar exercício">'+icon('plus',11)+'</button>'+
+                '<button class="buy-btn" data-action="deltraining" data-id="'+t.id+'" style="padding:5px 8px;border-color:var(--red);color:var(--red);background:rgba(255,77,109,.1)" title="Excluir treino">'+icon('trash',11)+'</button>'+
+              '</span></h3>';
+            if(!t.ex.length){
+              inner += '<div class="empty">Sem exercícios.</div>';
+            } else {
+              inner += t.ex.map((ex,i)=>'<div class="training-ex"><span>'+esc(ex.name)+'</span><span style="display:flex;gap:6px;align-items:center"><span>'+esc(ex.prescription||'')+'</span><button class="buy-btn" data-action="deltrainingexercise" data-id="'+t.id+'" data-idx="'+i+'" style="padding:3px 6px;border-color:var(--red);color:var(--red);background:rgba(255,77,109,.1)">'+icon('x',10)+'</button></span></div>').join('');
+            }
+            inner += '</div>';
+            return inner;
+          }).join('')
+        : '<div class="empty">Nenhum treino personalizado ainda.</div>')+
+      '<div class="inline-btns"><button class="btn" data-action="addtraining">'+icon('plus',14)+' CRIAR TREINO</button></div>'+
+      '<div class="notice">Ajuste o plano conforme sua realidade. Progressão e técnica devem ser validadas por profissional.</div>'+
+    '</div>';
   }
   return '<div class="card"><div class="subtabs">'+
     '<button class="subtab '+(healthSubtab==='resumo'?'active':'')+'" data-action="healthtab" data-v="resumo">'+icon('heart',12)+' Resumo</button>'+
@@ -2236,8 +2296,24 @@ function viewHealth(){
 }
 function renderFoodList(term){
   const q=(term||'').toLowerCase().trim();
-  const foods=allFoods().filter(f=>!q || f.name.toLowerCase().includes(q)).slice(0,60);
-  return foods.map(f=>'<div class="food-row"><div class="food-main"><div class="food-name">'+esc(f.name)+(f.custom?' <span class="profile-badge">PERSONALIZADO</span>':'')+'</div><div class="nutri-mini"><span>'+f.kcal+' kcal</span><span>P <b>'+f.protein+'g</b></span><span>C <b>'+f.carbs+'g</b></span><span>G <b>'+f.fat+'g</b></span><span>Fibra <b>'+f.fiber+'g</b></span></div></div><div class="food-kcal">/100'+f.unit+'</div></div>').join('') || '<div class="empty">Nenhum alimento encontrado.</div>';
+  const foods=allFoods().filter(f=>!q || f.name.toLowerCase().includes(q)).slice(0,80);
+  if(!foods.length) return '<div class="empty">Nenhum alimento encontrado.</div>';
+  return foods.map(f=>{
+    const isCustom = !!f.custom;
+    return '<div class="food-row">'+
+      '<div class="food-main">'+
+        '<div class="food-name">'+esc(f.name)+(isCustom?' <span class="profile-badge">PERSONALIZADO</span>':'')+'</div>'+
+        '<div class="nutri-mini"><span>'+f.kcal+' kcal</span><span>P <b>'+f.protein+'g</b></span><span>C <b>'+f.carbs+'g</b></span><span>G <b>'+f.fat+'g</b></span><span>Fibra <b>'+f.fiber+'g</b></span></div>'+
+      '</div>'+
+      '<div style="display:flex;align-items:center;gap:6px">'+
+        '<div class="food-kcal">/100'+f.unit+'</div>'+
+        (isCustom ?
+          '<button class="buy-btn" data-action="editfood" data-id="'+f.id+'" title="Editar" style="padding:6px 8px">'+icon('pencil',12)+'</button>'+
+          '<button class="buy-btn" data-action="delfood" data-id="'+f.id+'" title="Excluir" style="border-color:var(--red);color:var(--red);background:rgba(255,77,109,.1);padding:6px 8px">'+icon('trash',12)+'</button>'
+        : '')+
+      '</div>'+
+    '</div>';
+  }).join('');
 }
 
 /* ----- SYSTEM ----- */
@@ -2308,6 +2384,7 @@ document.addEventListener('click', function(e){
     S.player.meals=S.player.meals.filter(m=>m.id!==el.dataset.id);
     save(); render(); toast('Registro removido.','green','trash'); return;
   }
+  
   if(a==='addfood'){
     const name=(prompt('Nome do alimento:')||'').trim(); if(!name) return;
     const unit=(prompt('Unidade base (g ou ml):','g')||'g').toLowerCase();
@@ -2315,6 +2392,87 @@ document.addEventListener('click', function(e){
     const id='custom_'+uid();
     S.player.customFoods.push({id,name,unit:unit==='ml'?'ml':'g',kcal:vals[0],protein:vals[1],carbs:vals[2],fat:vals[3],fiber:vals[4]});
     save(); render(); toast('Alimento personalizado adicionado.','green','check'); return;
+  }
+    if(a==='editfood'){
+    const id=el.dataset.id;
+    const idx=S.player.customFoods.findIndex(f=>f.id===id);
+    if(idx<0){ toast('Alimento não encontrado.','red','x'); return; }
+    const f=S.player.customFoods[idx];
+    const name=prompt('Nome:',f.name); if(name===null) return;
+    const unit=prompt('Unidade (g ou ml):',f.unit); if(unit===null) return;
+    const kcal=prompt('Calorias (kcal/100):',f.kcal); if(kcal===null) return;
+    const protein=prompt('Proteína (g/100):',f.protein); if(protein===null) return;
+    const carbs=prompt('Carboidratos (g/100):',f.carbs); if(carbs===null) return;
+    const fat=prompt('Gorduras (g/100):',f.fat); if(fat===null) return;
+    const fiber=prompt('Fibras (g/100):',f.fiber); if(fiber===null) return;
+    S.player.customFoods[idx]={
+      id:f.id, name:name.trim()||f.name, unit:(unit==='ml'?'ml':'g'),
+      kcal:Number(kcal)||0, protein:Number(protein)||0, carbs:Number(carbs)||0,
+      fat:Number(fat)||0, fiber:Number(fiber)||0
+    };
+    save(); render(); toast('Alimento atualizado.','green','check'); return;
+  }
+  if(a==='delfood'){
+    const id=el.dataset.id;
+    if(!confirm('Excluir este alimento personalizado?')) return;
+    S.player.customFoods = S.player.customFoods.filter(f=>f.id!==id);
+    // Remove registros que usavam ele
+    S.player.meals = (S.player.meals||[]).filter(m=>m.foodId!==id);
+    save(); render(); toast('Alimento removido.','green','trash'); return;
+  }
+  if(a==='addtocart'){
+    const foodId=(document.getElementById('plateFood')||{}).value;
+    const qty=Number((document.getElementById('plateQty')||{}).value)||0;
+    if(!foodId || qty<=0){ toast('Escolha alimento e quantidade.','red','x'); return; }
+    plateCart.push({foodId, qty});
+    save(); render(); toast('Adicionado ao prato.','green','check'); return;
+  }
+  if(a==='removefromcart'){
+    plateCart.splice(Number(el.dataset.idx),1);
+    render(); return;
+  }
+  if(a==='clearcart'){
+    if(!confirm('Limpar o prato atual?')) return;
+    plateCart=[]; render(); return;
+  }
+  if(a==='savecart'){
+    if(!plateCart.length){ toast('Prato vazio.','red','x'); return; }
+    const meal=(document.getElementById('plateMealType')||{}).value||'Outro';
+    const today=getToday();
+    plateCart.forEach(it=>{
+      S.player.meals.push({id:uid(),date:today,meal,foodId:it.foodId,qty:it.qty});
+    });
+    if(S.player.meals.length>500) S.player.meals.splice(0,S.player.meals.length-500);
+    plateCart=[];
+    save(); render(); toast('Refeição salva.','green','check'); return;
+  }
+  if(a==='addtraining'){
+    const name=prompt('Nome do treino (ex: Peito e tríceps):');
+    if(!name) return;
+    S.player.customTrainings.push({ id:uid(), name:name.trim(), ex:[] });
+    save(); render(); toast('Treino criado. Adicione exercícios.','green','check'); return;
+  }
+  if(a==='deltraining'){
+    const id=el.dataset.id;
+    if(!confirm('Excluir este treino?')) return;
+    S.player.customTrainings = S.player.customTrainings.filter(t=>t.id!==id);
+    save(); render(); toast('Treino removido.','green','trash'); return;
+  }
+  if(a==='addtrainingexercise'){
+    const id=el.dataset.id;
+    const t=S.player.customTrainings.find(x=>x.id===id);
+    if(!t) return;
+    const name=prompt('Nome do exercício:'); if(!name) return;
+    const prescription=prompt('Séries/repetições (ex: 4×10):','3×10')||'';
+    t.ex.push({ name:name.trim(), prescription:prescription.trim() });
+    save(); render(); toast('Exercício adicionado.','green','check'); return;
+  }
+  if(a==='deltrainingexercise'){
+    const id=el.dataset.id, idx=Number(el.dataset.idx);
+    const t=S.player.customTrainings.find(x=>x.id===id);
+    if(!t) return;
+    t.ex.splice(idx,1);
+    save(); render(); return;
   }
 
   if(a==='addstat'){
@@ -2425,6 +2583,19 @@ document.addEventListener('input', function(e){
     const box=document.getElementById('foodList');
     if(box) box.innerHTML=renderFoodList(e.target.value);
   }
+  if(e.target && e.target.id==='plateFoodFilter'){
+    const term=(e.target.value||'').toLowerCase();
+    const sel=document.getElementById('plateFood');
+    if(sel){
+      const cur=sel.value;
+      sel.innerHTML = allFoods()
+        .filter(f=>!term || f.name.toLowerCase().includes(term))
+        .slice(0,120)
+        .map(f=>'<option value="'+esc(f.id)+'">'+esc(f.name)+' — '+f.kcal+' kcal/100'+f.unit+'</option>')
+        .join('');
+      if(cur && Array.from(sel.options).some(o=>o.value===cur)) sel.value=cur;
+    }
+  }
 });
 
 /* ====== CSV ====== */
@@ -2476,6 +2647,10 @@ function toRows(){
   Object.entries(p.shopInventory).forEach(([k,v])=> rows.push(['shop', k, v]));
   Object.entries(S.exerciseCounters||{}).forEach(([k,v])=> rows.push(['counter', k, v]));
   S.customExercises.forEach(e=> rows.push(['custom', e.name, e.stat, e.unit, e.base]));
+  (S.player.customTrainings||[]).forEach(t=>{
+    rows.push(['customtraining', t.id, t.name]);
+    (t.ex||[]).forEach(ex=> rows.push(['customtrainingex', t.id, ex.name, ex.prescription||'']));
+  });
   S.log.slice(0,50).forEach(l=> rows.push(['log', new Date(l.t).toISOString(), l.msg]));
   return rows;
 }
@@ -2489,111 +2664,154 @@ function toCSV(sep){
   ).join(sep)).join('\n');
 }
 function parseCSV(text){
-  const rows = []; let row = [], field = '', inQ = false;
+  // Remove BOM (causa do bug de importação)
+  text = String(text||'').replace(/^\ufeff/, '');
+  const rows=[]; let row=[], field='', inQ=false;
   for(let i=0;i<text.length;i++){
-    const c = text[i];
+    const c=text[i];
     if(inQ){
-      if(c === '"'){ if(text[i+1] === '"'){ field += '"'; i++; } else inQ = false; }
-      else field += c;
+      if(c === '"'){
+        if(text[i+1] === '"'){ field += '"'; i++; }
+        else inQ = false;
+      } else field += c;
     } else {
       if(c === '"') inQ = true;
       else if(c === ','){ row.push(field); field=''; }
-      else if(c === '\n'){ row.push(field); rows.push(row); row=[]; field=''; }
-      else if(c === '\r'){}
       else if(c === '\t'){ row.push(field); field=''; }
+      else if(c === '\n'){ row.push(field); rows.push(row); row=[]; field=''; }
+      else if(c === '\r'){ /* skip */ }
       else field += c;
     }
   }
-  if(field || row.length){ row.push(field); rows.push(row); }
-  return rows;
+  if(field.length || row.length){ row.push(field); rows.push(row); }
+  return rows.filter(r => r.some(c => c!==''));
 }
 function fromCSV(text){
   const rows = parseCSV(text);
+  if(!rows.length) throw new Error('Nenhuma linha válida encontrada.');
+
   const st = defaultState();
-  st.skills = []; st.achievements = []; st.inventory = []; st.history = []; st.log = [];
-  st.today = null; st.prs = {}; st.customExercises = []; st.exerciseCounters = {};
-  st.player.meals = []; st.player.customFoods = [];
-  let first = true;
+  st.skills=[]; st.achievements=[]; st.inventory=[]; st.history=[]; st.log=[];
+  st.today=null; st.prs={}; st.customExercises=[]; st.exerciseCounters={};
+  st.player.meals=[]; st.player.customFoods=[]; st.player.customTrainings=[];
+
+  let first=true, ok=0, skipped=0;
   for(const r of rows){
     if(!r.length) continue;
     const t = (r[0]||'').trim().toLowerCase();
-    if(first && (t==='tipo'||t==='type')){ first=false; continue; }
+    if(first && (t==='tipo'||t==='type'||t==='')){ first=false; continue; }
     first = false;
-    if(t==='config'){
-      const k = r[1], v = r[2];
-      if(k==='difficulty' && DIFF_MULT[v]) st.difficulty = v;
-      if(k==='focus') st.focus = v;
-    }
-    else if(t==='health'){
-      if(r[1] in st.player.healthProfile){
-        st.player.healthProfile[r[1]] = ['age','height','weight','trainingDays'].includes(r[1]) ? (parseFloat(r[2])||0) : r[2];
+
+    try{
+      if(t==='config'){
+        const k=r[1], v=r[2];
+        if(k==='difficulty' && DIFF_MULT[v]) st.difficulty=v;
+        if(k==='focus') st.focus=v;
       }
+      else if(t==='health'){
+        const key=r[1];
+        if(key in st.player.healthProfile){
+          st.player.healthProfile[key] = ['age','height','weight','trainingDays'].includes(key) ? (parseFloat(r[2])||0) : r[2];
+        }
+      }
+      else if(t==='meal'){
+        if(r[1] && r[3]){
+          st.player.meals.push({id:uid(),date:r[1],meal:r[2]||'Outro',foodId:r[3],qty:parseFloat(r[4])||0});
+        }
+      }
+      else if(t==='food'){
+        if(r[1] && r[2]){
+          st.player.customFoods.push({
+            id:r[1], name:r[2], unit:(r[3]==='ml'?'ml':'g'),
+            kcal:parseFloat(r[4])||0, protein:parseFloat(r[5])||0,
+            carbs:parseFloat(r[6])||0, fat:parseFloat(r[7])||0, fiber:parseFloat(r[8])||0
+          });
+        }
+      }
+      else if(t==='training'){
+        // formato: training,id,name  +  trainingex,id,name,prescription
+      }
+      else if(t==='trainingex'){
+        // será agrupado abaixo
+      }
+      else if(t==='player'){
+        const k=r[1], v=r[2];
+        if(k==='name') st.player.name = v || 'Caçador';
+        else if(k==='class' && CLASSES[v]) st.player.class = v;
+        else if(['level','xp','hp','mp','gold','freePoints','streak','bestStreak','totalQuests','totalXp','bossesDefeated','prCount'].includes(k))
+          st.player[k] = parseInt(v,10)||0;
+      }
+      else if(t==='basestat'){
+        const k=r[1], v=parseInt(r[2],10);
+        if(k in st.baseStats && !isNaN(v)) st.baseStats[k]=v;
+      }
+      else if(t==='today'){
+        if(!st.today) st.today = { date:'', exercises:[], completed:false, rest:false, penalty:false, xpEarned:0, goldEarned:0, mood:0, note:'' };
+        const k=r[1], v=r[2];
+        if(k==='date') st.today.date=v;
+        else if(k==='completed') st.today.completed = v==='1';
+        else if(k==='rest') st.today.rest = v==='1';
+        else if(k==='penalty') st.today.penalty = v==='1';
+        else if(k==='mood') st.today.mood = parseInt(v,10)||0;
+        else if(k==='note') st.today.note = v;
+      }
+      else if(t==='exercise'){
+        if(!st.today) st.today = { date:getToday(), exercises:[], completed:false, rest:false, penalty:false, xpEarned:0, goldEarned:0, mood:0, note:'' };
+        st.today.exercises.push({
+          id:r[1]||uid(), name:r[2]||'Exercício', stat:r[3]||'str', unit:r[4]||'reps',
+          target:parseInt(r[5],10)||1, current:parseInt(r[6],10)||0,
+          done:r[7]==='1', xp:parseInt(r[8],10)||10, icon:'dumbbell',
+          rewarded: r[7]==='1'   // migração: se já estava feito, marca como já recompensado
+        });
+      }
+      else if(t==='history'){
+        st.history.push({
+          date:r[1], completed:r[2]==='1', rest:r[3]==='1', penalty:r[4]==='1',
+          xpEarned:parseInt(r[5],10)||0, mood:parseInt(r[6],10)||0, note:r[7]||''
+        });
+      }
+      else if(t==='skill'){
+        st.skills.push({ id:r[1], name:r[2], minLevel:parseInt(r[3],10)||1, unlocked:r[4]==='1', desc:'', bonus:{} });
+      }
+      else if(t==='item'){
+        st.inventory.push({
+          id:r[1]||uid(), sid:r[2]||'', name:r[3]||'', qty:parseInt(r[4],10)||1,
+          rarity:r[5]||'comum', equippable:r[6]==='1', icon:'gem'
+        });
+      }
+      else if(t==='achievement'){
+        st.achievements.push({ id:r[1], unlocked:r[2]==='1', unlockedAt:0 });
+      }
+      else if(t==='pr'){ st.prs[r[1]] = parseInt(r[2],10)||0; }
+      else if(t==='equipped'){ st.player.equipped[r[1]] = r[2]; }
+      else if(t==='shop'){ st.player.shopInventory[r[1]] = parseInt(r[2],10)||0; }
+      else if(t==='counter'){ st.exerciseCounters[r[1]] = parseInt(r[2],10)||0; }
+      else if(t==='custom'){ st.customExercises.push({ name:r[1], stat:r[2]||'str', unit:r[3]||'reps', base:parseInt(r[4],10)||10, icon:'dumbbell' }); }
+      else if(t==='log'){ if(r[2]) st.log.push({ t: Date.parse(r[1])||Date.now(), msg:r[2] }); }
+      else if(t==='customtraining'){
+        if(r[1]){
+          st.player.customTrainings.push({ id:r[1], name:r[2]||'Treino', ex:[] });
+        }
+      }
+      else if(t==='customtrainingex'){
+        if(r[1]){
+          let t2 = st.player.customTrainings.find(x=>x.id===r[1]);
+          if(!t2){ t2 = { id:r[1], name:'Treino', ex:[] }; st.player.customTrainings.push(t2); }
+          t2.ex.push({ name:r[2]||'Exercício', prescription:r[3]||'' });
+        }
+      }
+      ok++;
+    }catch(err){
+      skipped++;
+      console.warn('Linha ignorada:', r, err);
     }
-    else if(t==='meal'){
-      st.player.meals.push({id:uid(),date:r[1],meal:r[2]||'Outro',foodId:r[3],qty:parseFloat(r[4])||0});
-    }
-    else if(t==='food'){
-      st.player.customFoods.push({id:r[1],name:r[2],unit:r[3]||'g',kcal:parseFloat(r[4])||0,protein:parseFloat(r[5])||0,carbs:parseFloat(r[6])||0,fat:parseFloat(r[7])||0,fiber:parseFloat(r[8])||0});
-    }
-    else if(t==='player'){
-      const k = r[1], v = r[2];
-      if(k==='name') st.player.name = v || 'Caçador';
-      else if(k==='class' && CLASSES[v]) st.player.class = v;
-      else if(['level','xp','hp','mp','gold','freePoints','streak','bestStreak','totalQuests','totalXp','bossesDefeated','prCount'].indexOf(k)>=0)
-        st.player[k] = parseInt(v,10)||0;
-    }
-    else if(t==='basestat'){
-      const k = r[1], v = parseInt(r[2],10);
-      if(k in st.baseStats && !isNaN(v)) st.baseStats[k] = v;
-    }
-    else if(t==='today'){
-      if(!st.today) st.today = { date:'', exercises:[], completed:false, rest:false, penalty:false, xpEarned:0, goldEarned:0, mood:0, note:'' };
-      const k = r[1], v = r[2];
-      if(k==='date') st.today.date = v;
-      else if(k==='completed') st.today.completed = v==='1';
-      else if(k==='rest') st.today.rest = v==='1';
-      else if(k==='penalty') st.today.penalty = v==='1';
-      else if(k==='mood') st.today.mood = parseInt(v,10)||0;
-      else if(k==='note') st.today.note = v;
-    }
-    else if(t==='exercise'){
-      if(!st.today) st.today = { date:getToday(), exercises:[], completed:false, rest:false, penalty:false, xpEarned:0, goldEarned:0, mood:0, note:'' };
-      st.today.exercises.push({
-        id:r[1], name:r[2], stat:r[3]||'str', unit:r[4]||'reps',
-        target:parseInt(r[5],10)||1, current:parseInt(r[6],10)||0,
-        done:r[7]==='1', xp:parseInt(r[8],10)||10, icon:'dumbbell',
-      });
-    }
-    else if(t==='history'){
-      st.history.push({
-        date:r[1], completed:r[2]==='1', rest:r[3]==='1', penalty:r[4]==='1',
-        xpEarned:parseInt(r[5],10)||0, mood:parseInt(r[6],10)||0, note:r[7]||''
-      });
-    }
-    else if(t==='skill'){
-      st.skills.push({ id:r[1], name:r[2], minLevel:parseInt(r[3],10)||1, unlocked:r[4]==='1', desc:'', bonus:{} });
-    }
-    else if(t==='item'){
-      st.inventory.push({
-        id:r[1], sid:r[2]||'', name:r[3]||'', qty:parseInt(r[4],10)||1,
-        rarity:r[5]||'comum', equippable:r[6]==='1', icon:'gem'
-      });
-    }
-    else if(t==='achievement'){
-      st.achievements.push({ id:r[1], unlocked:r[2]==='1', unlockedAt:0 });
-    }
-    else if(t==='pr'){ st.prs[r[1]] = parseInt(r[2],10)||0; }
-    else if(t==='equipped'){ st.player.equipped[r[1]] = r[2]; }
-    else if(t==='shop'){ st.player.shopInventory[r[1]] = parseInt(r[2],10)||0; }
-    else if(t==='counter'){ st.exerciseCounters[r[1]] = parseInt(r[2],10)||0; }
-    else if(t==='custom'){ st.customExercises.push({ name:r[1], stat:r[2]||'str', unit:r[3]||'reps', base:parseInt(r[4],10)||10, icon:'dumbbell' }); }
-    else if(t==='log'){ if(r[2]) st.log.push({ t: Date.parse(r[1])||Date.now(), msg:r[2] }); }
   }
+
   if(!st.skills.length) st.skills = defaultState().skills;
   else {
     SKILLS.forEach(def=>{
       const existing = st.skills.find(s=>s.id===def.id);
-      if(!existing) st.skills.push({ ...def, unlocked:false });
+      if(!existing) st.skills.push(Object.assign({}, def, { unlocked:false }));
       else { existing.bonus = def.bonus; existing.desc = def.desc; }
     });
   }
@@ -2601,7 +2819,18 @@ function fromCSV(text){
     if(!st.achievements.find(a=>a.id===def.id))
       st.achievements.push({ id:def.id, unlocked:false, unlockedAt:0 });
   });
+
+  // Recalcula stats derivados
+  const savedS = S;
+  S = st;
+  try{ recalcStats(); }catch(e){ console.warn(e); }
+  st.player.hp = Math.max(0, Math.min(st.player.hp, hpMax()));
+  st.player.mp = Math.max(0, Math.min(st.player.mp, mpMax()));
+  S = savedS;
+
   st.initialized = true;
+  st.version = 6;
+  console.log('Import: '+ok+' linhas válidas, '+skipped+' ignoradas.');
   return st;
 }
 function download(filename, text, mime){
