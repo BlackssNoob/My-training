@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#202923">
+<title>Leitor de preços</title>
+<style>
+:root{color-scheme:dark;--bg:#171e1a;--panel:#222c25;--panel2:#29352d;--text:#edf2e9;--muted:#aab6aa;--accent:#b5c99a;--line:#3b493e;--danger:#e6a09a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:760px;margin:auto;padding:18px 15px 40px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+h1{font-size:1.35rem;margin:0;font-weight:700;letter-spacing:-.03em} .sub{color:var(--muted);font-size:.88rem;margin-top:4px}
+.pill{border:1px solid var(--line);border-radius:99px;padding:6px 10px;color:var(--muted);font-size:.75rem;white-space:nowrap}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px;margin:13px 0}
+.section-title{font-weight:650;margin:0 0 10px;font-size:1rem}
+.camera-wrap{position:relative;overflow:hidden;border-radius:13px;background:#080b09;aspect-ratio:4/3;display:grid;place-items:center}
+video{width:100%;height:100%;object-fit:cover;display:block}
+.frame{position:absolute;width:78%;height:44%;border:2px solid var(--accent);border-radius:12px;box-shadow:0 0 0 999px #0006;pointer-events:none}
+.frame:before,.frame:after{content:"";position:absolute;width:18px;height:18px;border-color:#fff;border-style:solid}
+.frame:before{top:-2px;left:-2px;border-width:3px 0 0 3px;border-radius:8px 0 0}
+.frame:after{bottom:-2px;right:-2px;border-width:0 3px 3px 0;border-radius:0 0 8px}
+.camera-hint{position:absolute;bottom:10px;left:10px;right:10px;text-align:center;color:#fff;text-shadow:0 1px 4px #000;font-size:.8rem}
+.actions{display:flex;gap:9px;margin-top:12px;flex-wrap:wrap}
+button,.file-label{border:0;border-radius:12px;padding:12px 15px;font:600 .92rem system-ui;cursor:pointer}
+button.primary{background:var(--accent);color:#1b241c;flex:1}
+button.secondary,.file-label{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.status{color:var(--muted);font-size:.83rem;margin-top:10px;min-height:1.2em}
+.progress{height:5px;background:#101511;border-radius:8px;overflow:hidden;margin-top:8px;display:none}
+.progress span{height:100%;width:0;background:var(--accent);display:block;transition:width .2s}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label{display:block;color:var(--muted);font-size:.78rem;margin:0 0 5px}
+input{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#151c17;color:var(--text);font:inherit;outline:none}
+input:focus{border-color:var(--accent)}
+.field{min-width:0}
+#review{display:none}
+.list-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.count{font-size:.78rem;color:var(--muted)}
+.items{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.item{display:flex;align-items:center;gap:10px;padding:11px;background:var(--panel2);border-radius:12px}
+.item-main{min-width:0;flex:1}.item-name{font-weight:600;overflow-wrap:anywhere}.item-meta{color:var(--muted);font-size:.75rem;margin-top:2px}
+.price{font-weight:750;font-variant-numeric:tabular-nums;white-space:nowrap}
+.remove{padding:7px 9px;background:transparent;color:var(--danger);border:1px solid #67413d;font-size:.8rem}
+.empty{color:var(--muted);font-size:.88rem;text-align:center;padding:20px 8px}
+.export{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.export button{flex:1}
+.small{color:var(--muted);font-size:.76rem;margin-top:10px}
+#fileInput{display:none}
+@media(max-width:420px){main{padding:14px 12px 32px}.card{padding:12px}.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main>
+<header><div><h1>Leitor de preços</h1><div class="sub">Monte sua própria base de preços no supermercado.</div></div><span class="pill">SEU CATÁLOGO</span></header>
+
+<section class="card">
+  <h2 class="section-title">1. Enquadrar etiqueta</h2>
+  <div class="camera-wrap">
+    <video id="video" autoplay playsinline muted></video>
+    <div class="frame"></div>
+    <div class="camera-hint" id="cameraHint">Ative a câmera e enquadre a etiqueta dentro do retângulo</div>
+  </div>
+  <div class="actions">
+    <button class="secondary" id="startBtn">Ativar câmera</button>
+    <button class="primary" id="scanBtn" disabled>Ler etiqueta</button>
+  </div>
+  <div class="status" id="status" aria-live="polite">A câmera só funciona em uma página HTTPS ou em localhost.</div>
+  <div class="progress" id="progress"><span id="bar"></span></div>
+  <div class="small">Dica: aproxime a câmera, mantenha o texto nítido e deixe a etiqueta bem iluminada. A leitura é feita no aparelho usando OCR.</div>
+</section>
+
+<section class="card" id="review">
+  <h2 class="section-title">2. Conferir leitura</h2>
+  <div class="grid">
+    <div class="field"><label for="product">Nome do produto</label><input id="product" placeholder="Ex.: Arroz tipo 1 5 kg"></div>
+    <div class="field"><label for="price">Preço (R$)</label><input id="price" inputmode="decimal" placeholder="Ex.: 24,99"></div>
+  </div>
+  <div class="actions">
+    <button class="primary" id="addBtn">Adicionar à lista</button>
+    <button class="secondary" id="cancelBtn">Descartar</button>
+  </div>
+  <div class="small" id="ocrRaw"></div>
+</section>
+
+<section class="card">
+  <div class="list-head"><h2 class="section-title" style="margin:0">3. Produtos registrados</h2><span class="count" id="count">0 itens</span></div>
+  <div id="items" class="items"><div class="empty">Sua lista está vazia. Faça a leitura da primeira etiqueta.</div></div>
+  <div class="export">
+    <button class="secondary" id="jsonBtn" disabled>Exportar JSON</button>
+    <button class="secondary" id="txtBtn" disabled>Exportar TXT</button>
+  </div>
+  <div class="actions"><button class="secondary" id="clearBtn" style="width:100%" disabled>Limpar lista</button></div>
+  <div class="small">Os registros ficam salvos neste navegador enquanto você usa esta página. Exporte o arquivo para guardar sua base.</div>
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script>
+(() => {
+ const $ = id => document.getElementById(id);
+ const video=$('video'), status=$('status'), startBtn=$('startBtn'), scanBtn=$('scanBtn');
+ let stream=null, worker=null, products=[];
+ const setStatus=t=>status.textContent=t;
+ function normalizePrice(s){
+   let v=s.replace(/[^\d.,]/g,'').trim();
+   if(!v) return '';
+   // Etiquetas brasileiras costumam usar vírgula decimal; preserva o padrão quando possível.
+   if(v.includes(',') && v.includes('.')) v=v.replace(/\./g,'').replace(',','.');
+   else if(v.includes(',')) v=v.replace(',','.');
+   const n=Number(v);
+   return Number.isFinite(n) && n>0 ? n.toFixed(2).replace('.',',') : '';
+ }
+ function extract(text){
+   const lines=text.split(/\n/).map(x=>x.trim()).filter(Boolean);
+   const priceMatches=[];
+   for(const line of lines){
+     const matches=line.match(/(?:R\s*\$?\s*)?\d{1,4}(?:[.,]\d{2})/g)||[];
+     matches.forEach(m=>{const p=normalizePrice(m);if(p)priceMatches.push({raw:m,price:p,score:(/[Rr]\s*\$/.test(line)?3:0)+(line.length<22?1:0)});});
+   }
+   priceMatches.sort((a,b)=>b.score-a.score);
+   const price=priceMatches[0]?.price||'';
+   const ignored=/^(r\$?|un|kg|g|ml|l|cada|quilo|pre[cç]o|oferta|leve|pague|por)$/i;
+   const candidates=lines.filter(l=>!ignored.test(l)&&!/\d{1,4}[.,]\d{2}/.test(l)&&/[a-zá-ú]/i.test(l))
+      .map(l=>l.replace(/[|_~]/g,' ').replace(/\s{2,}/g,' ').trim())
+      .filter(l=>l.length>=3 && l.length<=70);
+   // Evita linhas de validade/código e escolhe a linha textual mais informativa.
+   candidates.sort((a,b)=>((b.match(/[a-zá-ú]/gi)||[]).length+(b.includes(' ')?8:0))-((a.match(/[a-zá-ú]/gi)||[]).length+(a.includes(' ')?8:0)));
+   return {name:candidates[0]||'',price,raw:lines.join(' • ')};
+ }
+ async function startCamera(){
+   try{
+     if(!navigator.mediaDevices?.getUserMedia) throw new Error('Este navegador não disponibiliza acesso à câmera. Abra em HTTPS.');
+     stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'},width:{ideal:1920},height:{ideal:1080}},audio:false});
+     video.srcObject=stream; await video.play();
+     startBtn.textContent='Câmera ativa';scanBtn.disabled=false;
+     $('cameraHint').textContent='Centralize o nome e o preço da etiqueta';
+     setStatus('Câmera pronta. Enquadre uma etiqueta e toque em “Ler etiqueta”.');
+   }catch(e){setStatus('Não foi possível abrir a câmera: '+e.message);}
+ }
+ async function getWorker(){
+   if(worker) return worker;
+   if(!window.Tesseract) throw new Error('Não foi possível carregar o OCR. Verifique sua conexão com a internet e recarregue a página.');
+   worker=await Tesseract.createWorker('por');
+   return worker;
+ }
+ async function scan(){
+   if(!video.videoWidth){setStatus('A câmera ainda não está pronta.');return;}
+   scanBtn.disabled=true;$('progress').style.display='block';$('bar').style.width='8%';
+   setStatus('Preparando leitura...');
+   try{
+     const w=await getWorker();
+     const vw=video.videoWidth,vh=video.videoHeight;
+     // Recorte central correspondente à área de enquadramento desenhada na tela.
+     const cropW=vw*.78,cropH=vh*.44,cropX=(vw-cropW)/2,cropY=(vh-cropH)/2;
+     const canvas=document.createElement('canvas');canvas.width= Math.round(cropW*1.5);canvas.height=Math.round(cropH*1.5);
+     const ctx=canvas.getContext('2d');ctx.filter='contrast(1.25)';ctx.drawImage(video,cropX,cropY,cropW,cropH,0,0,canvas.width,canvas.height);
+     $('bar').style.width='35%';setStatus('Lendo texto da etiqueta...');
+     const result=await w.recognize(canvas);
+     $('bar').style.width='100%';
+     const found=extract(result.data.text);
+     $('product').value=found.name;$('price').value=found.price;
+     $('ocrRaw').textContent=found.raw?'Texto reconhecido: '+found.raw:'Não consegui identificar texto com segurança. Você pode preencher manualmente.';
+     $('review').style.display='block';
+     $('review').scrollIntoView({behavior:'smooth',block:'nearest'});
+     setStatus(found.name||found.price?'Leitura concluída. Confira os campos antes de adicionar.':'Não encontrei nome ou preço. Tente aproximar e melhorar o foco.');
+   }catch(e){setStatus('Erro na leitura: '+e.message);}
+   finally{scanBtn.disabled=false;setTimeout(()=>$('progress').style.display='none',700);}
+ }
+ function render(){
+   $('count').textContent=products.length+' '+(products.length===1?'item':'itens');
+   $('items').innerHTML='';
+   if(!products.length){$('items').innerHTML='<div class="empty">Sua lista está vazia. Faça a leitura da primeira etiqueta.</div>';}
+   products.forEach((p,i)=>{
+     const row=document.createElement('div');row.className='item';
+     const main=document.createElement('div');main.className='item-main';
+     const name=document.createElement('div');name.className='item-name';name.textContent=p.name;
+     const meta=document.createElement('div');meta.className='item-meta';meta.textContent=new Date(p.createdAt).toLocaleString('pt-BR');
+     const price=document.createElement('div');price.className='price';price.textContent='R$ '+p.price;
+     const del=document.createElement('button');del.className='remove';del.textContent='Excluir';del.onclick=()=>{products.splice(i,1);render();};
+     main.append(name,meta);row.append(main,price,del);$('items').append(row);
+   });
+   ['jsonBtn','txtBtn','clearBtn'].forEach(id=>$(id).disabled=!products.length);
+ }
+ function add(){
+   const name=$('product').value.trim(),price=normalizePrice($('price').value);
+   if(!name){setStatus('Informe o nome do produto.');$('product').focus();return;}
+   if(!price){setStatus('Informe um preço válido, por exemplo 12,99.');$('price').focus();return;}
+   products.unshift({name,price,currency:'BRL',createdAt:new Date().toISOString()});
+   render();$('review').style.display='none';$('product').value='';$('price').value='';$('ocrRaw').textContent='';
+   setStatus('Produto adicionado à lista.');
+ }
+ function download(filename,content,type){
+   const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);
+   const a=document.createElement('a');a.href=url;a.download=filename;a.click();URL.revokeObjectURL(url);
+ }
+ startBtn.onclick=startCamera;scanBtn.onclick=scan;$('addBtn').onclick=add;
+ $('cancelBtn').onclick=()=>{$('review').style.display='none';setStatus('Leitura descartada.');};
+ $('jsonBtn').onclick=()=>download('base_precos.json',JSON.stringify({exportadoEm:new Date().toISOString(),produtos:products},null,2),'application/json;charset=utf-8');
+ $('txtBtn').onclick=()=>download('base_precos.txt',products.map(p=>`${p.name} - R$ ${p.price}`).join('\n'),'text/plain;charset=utf-8');
+ $('clearBtn').onclick=()=>{if(confirm('Deseja apagar todos os produtos desta lista?')){products=[];render();setStatus('Lista limpa.');}};
+ render();
+ window.addEventListener('pagehide',()=>{if(stream)stream.getTracks().forEach(t=>t.stop());if(worker)worker.terminate();});
+})();
+</script>
+</body>
+</html>
